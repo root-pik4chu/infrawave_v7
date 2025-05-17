@@ -24,3 +24,59 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+@font-face {
+  font-family: smallheading;
+  src: url("../fonts/static/Geist-Medium.ttf");
+}
+
+@font-face {
+  font-family: heading;
+  src: url("../fonts/ANTON-REGULAR.TTF");
+}
+
+h1,button,p{
+  z-index: 11;
+}
+
+h1,p,h2,h3,h4{
+  text-transform: uppercase;
+}
+h1{
+  font-size: 10vw;
+  font-family: heading;
+  line-height: vw;
+  /* color:#3838CE; */
+  color: #202020;
+}
+h3{
+  font-family: smallheading;
+  font-size: 5.2vw;
+  color: #202020;
+
+}
+h4{
+  font-family: smallheading;
+  font-size: 1.2vw;
+  
+  color: #202020;
+
+}
+
+h2{
+  font-family: smallheading;
+  font-size: 2vw;
+  line-height: 2vw;
+  color: #202020;
+
+}
+p{
+  font-family: smallheading;
+  font-size: .9vw;
+  /* font-size: 1.2vw; */
+  line-height: 1.1vw;
+  color: #202020;
+}
+
+Footer{
+  background-color: #FF4E27;
+}
