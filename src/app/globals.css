@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #E6E6E6;
   --foreground: #171717;
 }
 
@@ -18,7 +18,7 @@
     --foreground: #ededed;
   }
 }
-
+/* bg-[E6E6E6] */
 body {
   background: var(--background);
   color: var(--foreground);
@@ -26,7 +26,7 @@ body {
 }
 @font-face {
   font-family: smallheading;
-  src: url("../fonts/static/Geist-Medium.ttf");
+  src: url("../fonts/jetbrainsmono/JETBRAINSMONO-VARIABLEFONT_WGHT_0.TTF");
 }
 
 @font-face {
@@ -40,41 +40,42 @@ h1,button,p{
 
 h1,p,h2,h3,h4{
   text-transform: uppercase;
+  color: #2C2C2C;
 }
 h1{
   font-size: 10vw;
   font-family: heading;
   line-height: vw;
   /* color:#3838CE; */
-  color: #202020;
+
 }
 h3{
   font-family: smallheading;
   font-size: 5.2vw;
-  color: #202020;
+
 
 }
 h4{
   font-family: smallheading;
   font-size: 1.2vw;
   
-  color: #202020;
+
 
 }
 
 h2{
-  font-family: smallheading;
+  font-family: heading;
   font-size: 2vw;
-  line-height: 2vw;
-  color: #202020;
+  line-height: 2.1vw;
+ 
 
 }
 p{
   font-family: smallheading;
   font-size: .9vw;
   /* font-size: 1.2vw; */
-  line-height: 1.1vw;
-  color: #202020;
+  line-height: 1vw;
+ 
 }
 
 Footer{

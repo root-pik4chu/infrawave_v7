@@ -5,9 +5,9 @@ import CountUp from "@/commonComponent/CountingUp/page";
 
 export default function AboutSection() {
   return (
-    <div className="w-full h-[80vh] relative bg-zinc-50 overflow-hidden">
-      <div className="w-full h-[90%] ">
-        <div className="w-full h-full">
+    <div className="w-full h-[100vh] relative  overflow-hidden ">
+      <div className="w-full h-[90%] relative " style={{ backgroundColor: "#FF5151" }}>
+        <div className="w-full h-full ">
           <h1 className="px-[1vw]">About us</h1>
           <div className="w-full h-screen flex justify-end pt-[5vw]">
           <div className="flex items-center justify-center gap-[5vw] w-[70%] h-[40%] ">
@@ -26,7 +26,7 @@ export default function AboutSection() {
                     />
                     +
                   </h1>
-                  <p>creative work that drives real results</p>
+                  <p className="">creative work that drives real results</p>
                 </div>
               );
             })}

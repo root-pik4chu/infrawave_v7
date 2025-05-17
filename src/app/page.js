@@ -33,7 +33,8 @@ export default function Home() {
     <SliderProject />
 
     <ServiceSection />
-    <div className="w-full h-[120vh] bg-zinc-50 flex flex-col justify-end items-center pb-[5vh]">
+    <div className="w-full h-[80vh]"></div>
+    <div className="w-full h-[50vh]  flex flex-col justify-end items-center pb-[5vh]">
     <IconsScroller />
     </div>
 

@@ -65,7 +65,7 @@ export default function Page() {
   return (
     <>
       <div>
-        <div className="w-[100%] h-[270vh]  ">
+        <div className="w-[100%] h-[250vh]  ">
           {/* <Lines /> --------------------------------------
         <div className=" top-0 left-0 w-full h-full z-[1] pointer-events-none px-[1vw] absolute ">
         <div className="flex w-full h-full justify-between ">
@@ -84,17 +84,17 @@ export default function Page() {
                                 <Image src="/Rectangle98.svg" width={700} height={700} alt="img" />
 
               </div>
-              <div className="absolute top-[55vh] -left-[10vw] w-[45vw] h-[45vw]  rounded-full">
-                <Image src="/Rectangle98.svg" width={700} height={700} alt="img" />
+              <div className="absolute top-[55vh] -left-[5vw]  rounded-full">
+                <Image src="/Rectangle98.svg" width={800} height={800} alt="img" />
 
 
               </div>
               <div className="w-full h-[10vh]"></div>
               <div className="w-full h-full flex flex-col">
-                <div className="w-full h-[52vh]  flex">
-                  <div className="w-[65%] h-full   relative">
+                <div className="w-full h-[45vh]  flex ">
+                  <div className="w-[50%] h-full   relative">
                     <div className="w-full h-full relative flex items-end justify-start ">
-                    <h1 style={{fontSize:"24vw", lineHeight:"25vw"}}>INFRA</h1>
+                    <h1 style={{fontSize:"24vw", lineHeight:"22vw"}}>INFRA</h1>
 
                     </div>
                   </div>
@@ -110,20 +110,20 @@ export default function Page() {
                     </div>
                   </div>
                 </div>
-                <div className="w-full h-[52vh]  relative">
-                  <div className="w-full h-full relative flex">
-                    <div className="w-[35vw] h-full flex flex-col relative">
+                <div className="w-full h-[40%]  relative">
+                  <div className="w-full h-full relative flex justify-between">
+                    <div className="w-[35%] h-full flex flex-col relative">
                     <div className="w-full h-full relative">
                       <div className="w-full h-[90%]  px-[1vw]">
-                        <div className="w-full h-[50vh] relative flex items-end justify-end ">
+                        <div className="w-full h-[40vh] relative flex items-end justify-end ">
                           <h4 className="text-justify">Infrawave Solutions empowers businesses with cutting-edge digital services, offering web and mobile app development, AI/ML solutions, blockchain integration, and innovative technology for seamless digital transformation.</h4>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div className="w-[65vw] h-full  relative">
-                    <div className="w-full h-full relative flex items-start justify-end">
-                    <h1 style={{fontSize:"24vw", lineHeight:"25vw"}}>WAVE</h1>
+                  <div className="w-[50%] h-full   relative">
+                    <div className="w-full h-full relative flex items-end justify-end">
+                    <h1 style={{fontSize:"24vw", lineHeight:"22vw"}}>WAVE</h1>
 
                     </div>
 

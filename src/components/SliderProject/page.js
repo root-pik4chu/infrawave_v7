@@ -37,7 +37,7 @@ const FiveProjectSlider = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: containerRef.current,
-        start: "top 10%",
+        start: "top 0%",
         end: "+=300%",
         pin: true,
         scrub: 1,
@@ -70,7 +70,7 @@ const FiveProjectSlider = () => {
   return (
     <>
      <div
-        className="w-full h-[400vh]  bg-zinc-50 text-white"
+        className="w-full h-[400vh]   text-white"
         // style={{
         //   backgroundImage:
         //     "url('https://www.lumina-design.co/static/media/i_project_bg.9a00241e79d94cfd91eb.png')",

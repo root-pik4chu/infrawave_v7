@@ -40,7 +40,7 @@ export default function FlipCardsGrid() {
   ];
 
   return (
-    <div className="w-full h-[120vh] px-[1vw] mx-auto flex justify-center flex-col bg-zinc-50">
+    <div className="w-full h-[120vh] px-[1vw] mx-auto flex justify-center flex-col">
       <h1 className="text-3xl mb-8 lg:w-[70%] sm:w-full">faq</h1>
 
       <div className="lg:w-[70%] sm:w-full lg:left-[12%] relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-[5vw]">
