@@ -94,7 +94,7 @@ export default function Page() {
                 <div className="w-full h-[52vh]  flex">
                   <div className="w-[65%] h-full   relative">
                     <div className="w-full h-full relative flex items-end justify-start ">
-                    <h1 style={{fontSize:"27vw", lineHeight:"25vw"}}>INFRA</h1>
+                    <h1 style={{fontSize:"24vw", lineHeight:"25vw"}}>INFRA</h1>
 
                     </div>
                   </div>
@@ -123,7 +123,7 @@ export default function Page() {
                   </div>
                   <div className="w-[65vw] h-full  relative">
                     <div className="w-full h-full relative flex items-start justify-end">
-                    <h1 style={{fontSize:"27vw", lineHeight:"25vw"}}>WAVE</h1>
+                    <h1 style={{fontSize:"24vw", lineHeight:"25vw"}}>WAVE</h1>
 
                     </div>
 
