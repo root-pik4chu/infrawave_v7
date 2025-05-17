@@ -11,9 +11,9 @@ export default function AboutSection() {
           <h1 className="px-[1vw]">About us</h1>
           <div className="w-full h-screen flex justify-end pt-[5vw]">
           <div className="flex items-center justify-center gap-[5vw] w-[70%] h-[40%] ">
-            {[1, 2, 3].map(() => {
+            {[1, 2, 3].map((index, item) => {
               return (
-                <div className="flex items-start justify-between flex-col gap-[2vw]">
+                <div key={index} className="flex items-start justify-between flex-col gap-[2vw]">
                   <h2>project delivered</h2>
                   <h1>
                     <CountUp
