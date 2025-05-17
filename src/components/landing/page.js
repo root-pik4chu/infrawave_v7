@@ -81,10 +81,12 @@ const page = () => {
             {/* Top section */}
             <div className="w-full h-[110vh] relative">
               <div className="absolute -top-[10vw] -right-[25vw]  h-[50vw] w-[50vw]  rounded-full">
-                <img src="/Rectangle98.svg" />
+                                <Image src="/Rectangle98.svg" width={700} height={700} alt="img" />
+
               </div>
               <div className="absolute top-[55vh] -left-[10vw] w-[45vw] h-[45vw]  rounded-full">
-                <img src="/Rectangle98.svg" />
+                <Image src="/Rectangle98.svg" width={700} height={700} alt="img" />
+
 
               </div>
               <div className="w-full h-[10vh]"></div>
