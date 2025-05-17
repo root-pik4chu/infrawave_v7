@@ -8,7 +8,7 @@ import HoverButton from "@/commonComponent/button/button";
 import Link from "next/link";
 import Image from "next/image";
 
-const page = () => {
+export default function Page() {
   const firstBox = useRef(null);
   const secondBox = useRef(null);
   const videoBox = useRef(null);
@@ -204,4 +204,3 @@ const page = () => {
   );
 };
 
-export default page;

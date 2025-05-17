@@ -4,6 +4,8 @@ import React, { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import projects from "@/data/projectData"
+import Image from "next/image";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const FiveProjectSlider = () => {
@@ -97,11 +99,13 @@ const FiveProjectSlider = () => {
                 >
                   <div className="w-full h-[60%]">
                     {/* rounded-4xl */}
-                    <img
-                      className="object-cover w-full h-full overflow-hidden  border-[.2vw]"
-                      src="https://images.unsplash.com/photo-1695634621145-9133286e0247?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHByb2plY3QlMjBtb2NrdXBzfGVufDB8fDB8fHww"
-                      alt=""
-                    />
+                    <Image
+                                  width={500}
+                                  height={500}
+                                    className="w-full h-full object-cover "
+                                    src="/img.png"
+                                    alt=""
+                                  />
                   </div>
                   <div className="w-full h-[40%] pt-[1vw] grid grid-rows-1">
                     <h2 className="lowercase">{item.name}</h2>

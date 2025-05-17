@@ -1,5 +1,6 @@
 "use client"
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import React from 'react'
 
 const page = ({text="root"}) => {
@@ -38,11 +39,14 @@ const page = ({text="root"}) => {
               quos officiis ut perspiciatis.
             </p>
             <div className="md:w-[20%] w-full h-full">
-              <img
-                className="w-full h-full object-cover rounded-[.8vw]"
-                src="https://plus.unsplash.com/premium_photo-1746637466031-c74900b2ccb8?q=80&w=1934&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt=""
-              />
+              <Image
+                                                width={500}
+                                                height={500}
+                                                  className="w-full h-full object-cover "
+                                                  src="/img.png"
+                                                  alt=""
+                                                />
+                               
             </div>
           </div>
         </motion.div>
