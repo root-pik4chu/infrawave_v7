@@ -41,7 +41,7 @@ const SwipperData = () => {
   return (
     <>
       <div className="w-full h-[70%]">
-        <div className="w-full h-[10%] flex items-center">
+        <div className="w-full h-[10%] flex items-center ">
           <div
             ref={prevRef}
             className="swiper-button-prev w-[40px] h-[40px] bg-black text-white flex items-center justify-center rounded-full z-10 cursor-pointer"
@@ -84,7 +84,7 @@ const SwipperData = () => {
             {cardData.map((card, index) => (
               <SwiperSlide key={index}>
                 {/* rounded-xl */}
-                <div className="bg-zinc-200 p-4  shadow-md h-full grid grid-rows-2 py-[3vw] text-start ">
+                <div className="bg-zinc-300 p-4  shadow-md h-full grid grid-rows-2 py-[3vw] text-start ">
                   <h2 className="text-lg font-semibold lowercase leading-tight line-clamp-2">
                     {card.title}
                   </h2>

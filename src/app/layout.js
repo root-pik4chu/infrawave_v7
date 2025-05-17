@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar/page";
 import { useLenisScroll } from "@/hooks/useLenisScroll";
 import Footer from "@/components/Footer/page";
+import CustomCursor from "@/commonComponent/cursor/CustomCursor";
 
 export default function RootLayout({ children }) {
   useLenisScroll();
@@ -44,6 +45,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Navbar />
+        <CustomCursor />
         {children}
         <div
           style={{

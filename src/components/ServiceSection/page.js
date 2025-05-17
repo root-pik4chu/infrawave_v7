@@ -22,13 +22,13 @@ const page = ({ text = "root" }) => {
             <motion.div
               className="flex flex-col relative md:h-[45vh] h-[550px] w-[100%] origin-top md:px-[1vw] border-black/30 border-2"
               style={{
-                backgroundColor: "#FF5151",
+                backgroundColor: "#E6E6E6",
                 translateY: staggerOffset,
                 zIndex: 100 - i,
               }}
             >
               <div className="relative flex md:flex-row flex-col justify-between w-full h-full md:p-[1vw] p-[5vw] text-black">
-                <h2 className="md:w-[33%] lowercase">{item.Name}</h2>
+                <h1 style={{fontSize: "5vw", lineHeight:"5vw"}} className="md:w-[33%] lowercase">{item.Name}</h1>
                 <p className="md:w-[33%] text-justify">
                   {item.Desc}
                 </p>

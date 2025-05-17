@@ -10,8 +10,8 @@ const Footer = () => {
           clipPath: "polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%)",
         }}
       >
-        <div className="w-full h-[80vh] fixed bottom-0 bg-pink-300">
-          <footer className="bg-neutral-900 text-neutral-300 h-full px-4 md:px-8 py-8 md:py-12 grid grid-cols-1 md:grid-cols-12 gap-8">
+        <div className="w-full h-[80vh] fixed bottom-0  backdrop-blur-sm z-10 ">``
+          <footer className="  h-full px-4 md:px-8 py-8 md:py-12 grid grid-cols-1 md:grid-cols-12 gap-8">
             {/* Logo and Socials */}
             <div className="md:col-start-1 md:col-end-4 flex flex-col gap-4">
               <h1 className="text-xl md:text-3xl font-semibold">Infrawave</h1>
@@ -52,7 +52,7 @@ const Footer = () => {
 
             {/* Description */}
             <div className="md:col-start-1 md:col-end-7 mt-4 text-xs md:text-sm leading-snug">
-              <p>
+              <p className="">
                 Infrawave Solutions empowers businesses through cutting-edge digital services, including web and mobile development, AI/ML solutions, blockchain integration, and innovative technologies for seamless digital transformation.
               </p>
             </div>

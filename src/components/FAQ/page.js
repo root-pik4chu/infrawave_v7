@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 // Custom Card component
@@ -40,7 +41,12 @@ export default function FlipCardsGrid() {
   ];
 
   return (
-    <div className="w-full h-[120vh] px-[1vw] mx-auto flex justify-center flex-col">
+    <div className="w-full h-[120vh] px-[1vw] mx-auto flex justify-center flex-col relative overflow-hidden">
+       <div className="absolute top-[30vh] -right-[10vw] rounded-full z-0">
+                            <Image src="/Rectangle98.svg" width={800} height={500} alt="img" />
+            
+            
+                          </div>
       <h1 className="text-3xl mb-8 lg:w-[70%] sm:w-full">faq</h1>
 
       <div className="lg:w-[70%] sm:w-full lg:left-[12%] relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-[5vw]">

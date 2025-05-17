@@ -4,7 +4,7 @@ import { color } from "framer-motion";
 
 const projects = [
    {
-    color:"#FF5151",
+    color:"#dadada",
     //  color: "#3B82F6", // Blue-500
      name: "Next-Gen E-Commerce",
      description: "Build seamless and scalable e-commerce platforms with real-time data and advanced search algorithms.",
@@ -13,7 +13,7 @@ const projects = [
    {
     //  color: "#F472B6", // Pink-300
     // color:"#FF4E27",
-    color:"#FF5151",
+    color:"#dadada",
 
      name: "AI Chatbots",
      description: "Develop intelligent AI chatbots for customer service, powered by natural language processing (NLP).",
@@ -23,7 +23,7 @@ const projects = [
     //  color: "#10B981", // Green-500
     // color:"#FF4E27",
 
-    color:"#FF5151",
+    color:"#dadada",
 
      name: "Decentralized Finance (DeFi)",
      description: "Create decentralized applications (dApps) on the blockchain for secure and transparent financial services.",
@@ -31,7 +31,7 @@ const projects = [
    },
    {
     //  color: "#8B5CF6", // Purple-400
-    color:"#FF5151",
+    color:"#dadada",
     // color:"#FF4E27",
 
      name: "Immersive VR Experiences",
@@ -40,7 +40,7 @@ const projects = [
    },
    {
     //  color: "#F59E0B", // Yellow-500
-    color:"#FF5151",
+    color:"#dadada",
 
      name: "Cloud-Based Solutions",
      description: "Implement cloud-native applications using AWS, Google Cloud, and Azure for scalable, cost-efficient solutions.",
@@ -48,7 +48,7 @@ const projects = [
    },
    {
     //  color: "#22D3EE", // Sky Blue-400
-    color:"#FF5151",
+    color:"#dadada",
 
      name: "Mobile Health Apps",
      description: "Create mobile health applications that help users track fitness, wellness, and mental health.",
@@ -56,7 +56,7 @@ const projects = [
    },
    {
     //  color: "#D97706", // Amber-600
-    color:"#FF5151",
+    color:"#dadada",
 
      name: "Smart City Solutions",
      description: "Develop technologies to create intelligent infrastructure, improve urban living, and optimize city services.",
@@ -64,7 +64,7 @@ const projects = [
    },
    {
     //  color: "#F43F5E", // Rose-600
-    color:"#FF5151",
+    color:"#dadada",
 
      name: "Digital Marketing Automation",
      description: "Build marketing automation platforms for personalized campaigns, analytics, and lead generation.",
