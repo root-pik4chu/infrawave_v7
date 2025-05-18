@@ -80,12 +80,12 @@ export default function Page() {
           <div className="w-full h-full overflow-hidden">
             {/* Top section */}
             <div className="w-full h-[110vh] relative">
-              <div className="absolute -top-[10vw] -right-[25vw]  h-[50vw] w-[50vw]  rounded-full">
-                                <img src="/Rectangle98.svg" alt="img" />
+              <div className="absolute -top-[10vw] -right-[25vw] rounded-full">
+                                <Image src="/Rectangle98.svg" width={200} height={200} className="w-[50vw] h-[50vw] object-cover lg:w-[40vw] lg:h-[40vw] "alt="img" />
 
               </div>
-              <div className="absolute top-[55vh] -left-[5vw]  rounded-full">
-                <img src="/Rectangle98.svg"  alt="img" />
+              <div className="absolute top-[55vh] -left-[4vw]  rounded-full">
+                <Image src="/Rectangle98.svg" width={200} height={200} className="w-[50vw] h-[50vw] object-cover lg:w-[40vw] lg:h-[40vw] " alt="img" />
 
 
               </div>
