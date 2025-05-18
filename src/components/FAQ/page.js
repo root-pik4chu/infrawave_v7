@@ -43,7 +43,7 @@ export default function FlipCardsGrid() {
   return (
     <div className="w-full h-[120vh] px-[1vw] mx-auto flex justify-center flex-col relative overflow-hidden">
        <div className="absolute top-[30vh] -right-[10vw] rounded-full z-0">
-                            <Image src="/Rectangle98.svg" width={800} height={500} alt="img" />
+                            <Image src="/Rectangle98.svg" width={800} height={500}  className="w-[50vw] h-[50vw] object-cover lg:w-[40vw] lg:h-[40vw] "alt="img" />
             
             
                           </div>

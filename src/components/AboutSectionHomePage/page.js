@@ -10,7 +10,7 @@ export default function AboutSection() {
       
       <div className="w-full h-[90%] relative " >
         <div className="absolute top-[10vh] -left-[20vw] rounded-full z-0">
-                      <Image src="/Rectangle98.svg" width={800} height={500} alt="img" />
+                      <Image className="w-[50vw] h-[50vw] object-cover lg:w-[40vw] lg:h-[40vw] " src="/Rectangle98.svg" width={800} height={500} alt="img" />
       
       
                     </div>

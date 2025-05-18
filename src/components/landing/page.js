@@ -4,7 +4,7 @@ import React, { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import HoverButton from "@/commonComponent/button/button";
+
 import Link from "next/link";
 import Image from "next/image";
 
