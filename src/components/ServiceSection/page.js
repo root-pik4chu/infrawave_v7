@@ -26,7 +26,7 @@ const useWindowSize = () => {
   return { mounted, windowSize };
 };
 
-export default function page() {
+export default function Page() {
   const { mounted, windowSize } = useWindowSize();
   const isSmallScreen = mounted && windowSize.width < 1440;
 
