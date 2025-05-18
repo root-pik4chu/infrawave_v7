@@ -5,22 +5,24 @@ import React from "react";
 import {services} from "@/data/cardsData";
 const page = ({ text = "root" }) => {
   return (
-    <div className=" w-full h-[340vh]">
-      <div className="w-full flex items-center ">
+    <div className=" w-full h-[380vh] flex flex-col items-start  px-[2vw]">
+      <div className="w-full h-[20vh]  flex items-center ">
         <h1>Service Section</h1>
       </div>
-      {
+      <div className="w-full h-full relative">
+        {
       services.map((item, i) => {
         const staggerOffset = i * 90;
 
         return (
           <div
             key={i}
-            className="md:h-[14.5vw] h-[50vh] sticky top-[10vh]"
+            // md:h-[14.5vw] h-[50vh]
+            className="w-full md:h-[14.5vw] h-[50vh]  sticky top-[5vw]"
             style={{ color: "#fff" }}
           >
             <motion.div
-              className="flex flex-col relative md:h-[45vh] h-[550px] w-[100%] origin-top md:px-[1vw] border-black/30 border-2"
+              className="flex flex-col relative md:h-[45vh] h-[550px] w-[100%]  md:px-[2vw] border-black/30 border-2 "
               style={{
                 backgroundColor: "#E6E6E6",
                 translateY: staggerOffset,
@@ -46,8 +48,10 @@ const page = ({ text = "root" }) => {
           </div>
         );
       })}
+      </div>
+      <div className="w-full h-[90vh] ">gfsd</div>
     </div>
   );
-};
+}; 
 
 export default page;
