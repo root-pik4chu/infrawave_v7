@@ -81,11 +81,11 @@ export default function Page() {
             {/* Top section */}
             <div className="w-full h-[110vh] relative">
               <div className="absolute -top-[10vw] -right-[25vw]  h-[50vw] w-[50vw]  rounded-full">
-                                <Image src="/Rectangle98.svg" width={700} height={700} alt="img" />
+                                <img src="/Rectangle98.svg" alt="img" />
 
               </div>
               <div className="absolute top-[55vh] -left-[5vw]  rounded-full">
-                <Image src="/Rectangle98.svg" width={800} height={800} alt="img" />
+                <img src="/Rectangle98.svg"  alt="img" />
 
 
               </div>
