@@ -26,7 +26,7 @@ const useWindowSize = () => {
   return { mounted, windowSize };
 };
 
-const page = ({ text = "root" }) => {
+export default function page() {
   const { mounted, windowSize } = useWindowSize();
   const isSmallScreen = mounted && windowSize.width < 1440;
 
@@ -79,4 +79,4 @@ const page = ({ text = "root" }) => {
   );
 };
 
-export default page;
+
