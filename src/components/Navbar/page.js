@@ -46,7 +46,7 @@ export default function Page ()  {
 
         <div className="hidden md:grid col-span-4 grid-cols-4">
           {navItems.map((item, index) => (
-            <div key={index} className="flex justify-end text-white">
+            <div key={index} className="flex justify-end ">
               <Link
                 href={item.path}
                 className="text-[0.8vw] font-medium hover:cursor-pointer uppercase"

@@ -31,7 +31,7 @@ export default function Page() {
   const isSmallScreen = mounted && windowSize.width < 1440;
 
   return (
-    <div className="w-full h-[380vh] flex flex-col items-start px-[2vw]">
+    <div className="w-full h-[380vh] flex flex-col items-start px-[2vw] text-[var(--text-color)]">
       <div className="w-full h-[20vh] flex items-center">
         <h1>Service Section</h1>
       </div>
@@ -53,7 +53,7 @@ export default function Page() {
                   zIndex: 100 - i,
                 }}
               >
-                <div className="relative flex md:flex-row flex-col justify-between w-full h-full md:p-[1vw] p-[5vw] text-black">
+                <div className="relative flex md:flex-row flex-col justify-between w-full h-full md:p-[1vw] p-[5vw] text-[var(--text-color)]">
                   <h1 style={{fontSize: "5vw", lineHeight:"5vw"}} className="md:w-[33%] lowercase">{item.Name}</h1>
                   <p className="md:w-[33%] text-justify">
                     {item.Desc}

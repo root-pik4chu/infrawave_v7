@@ -70,7 +70,7 @@ const FiveProjectSlider = () => {
   return (
     <>
      <div
-        className="w-full h-[400vh]   text-white"
+        className="w-full h-[400vh]     text-[var(--text-color)]"
         // style={{
         //   backgroundImage:
         //     "url('https://www.lumina-design.co/static/media/i_project_bg.9a00241e79d94cfd91eb.png')",
@@ -86,7 +86,7 @@ const FiveProjectSlider = () => {
           ref={containerRef}
           className="w-full h-[100vh] overflow-hidden "
         >
-           <div className="w-full h-[25vh] flex items-end px-[1vw]  text-black "> <h1>projects</h1></div>
+           <div className="w-full h-[25vh] flex items-end px-[1vw]  "> <h1 >projects</h1></div>
           {/* Row of projects that moves horizontally */}
           <div ref={sliderRef} className="flex gap-8 h-full p-8">
             {projects.map((item, index) => {

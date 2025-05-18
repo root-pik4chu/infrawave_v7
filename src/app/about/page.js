@@ -11,8 +11,7 @@ export default function Page({
     width = "w-[10vw]",
     height = "h-[3vw]",
     bgColor = "bg-zinc-50",
-    arrowColor = "bg-zinc-900",
-    arrowSize = "text-[1.6vw]"
+    
   }) {
   const hoverRef = useRef(null);
   const upperTextRef = useRef(null);

@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import Link from "next/link";
 import Image from "next/image";
+import HoverButton from "@/commonComponent/button/button";
 
 export default function Page() {
   const firstBox = useRef(null);
@@ -65,7 +66,7 @@ export default function Page() {
   return (
     <>
       <div>
-        <div className="w-[100%] h-[250vh]  ">
+        <div className="w-[100%] h-[250vh] text-[var(--text-color)]">
           {/* <Lines /> --------------------------------------
         <div className=" top-0 left-0 w-full h-full z-[1] pointer-events-none px-[1vw] absolute ">
         <div className="flex w-full h-full justify-between ">
@@ -80,11 +81,11 @@ export default function Page() {
           <div className="w-full h-full overflow-hidden">
             {/* Top section */}
             <div className="w-full h-[110vh] relative">
-              <div className="absolute -top-[10vw] -right-[25vw] rounded-full">
+              <div className="absolute -top-[10vw] -right-[10vw] rounded-full">
                                 <Image src="/Rectangle98.svg" width={200} height={200} className="w-[50vw] h-[50vw] object-cover lg:w-[40vw] lg:h-[40vw] "alt="img" />
 
               </div>
-              <div className="absolute top-[55vh] -left-[4vw]  rounded-full">
+              <div className="absolute top-[55vh] -left-[6vw]  rounded-full">
                 <Image src="/Rectangle98.svg" width={200} height={200} className="w-[50vw] h-[50vw] object-cover lg:w-[40vw] lg:h-[40vw] " alt="img" />
 
 
@@ -98,13 +99,35 @@ export default function Page() {
 
                     </div>
                   </div>
-                  <div className="w-[35%] h-full flex flex-col">
-                    <div className="w-full h-[80%]">
-
+                  <div className="w-[50%] h-full flex flex-col px-[1vw] gap-[3vw]">
+                    <div className="w-full h-[80%]  flex justify-end">
+                    <div className="w-[40%] h-full  flex justify-start items-end flex-col gap-[1vw] pt-[1vw]">
+                      <HoverButton 
+                      
+                      text = "contact"
+    textSize = "text-[1vw]"
+    padding = "p-[1vw]"
+    width = "w-[13vw]"
+    height = "h-[4vw]"
+    bgColor = "bg-zinc-50"
+    textColor = "text-zinc-900"
+                      />
+                      <HoverButton 
+                      
+                      text = "contact"
+    textSize = "text-[1vw]"
+    padding = "p-[1vw]"
+    width = "w-[13vw]"
+    height = "h-[4vw]"
+    bgColor = "bg-zinc-800"
+    textColor = "text-zinc-50"
+                      />
+                    </div>
+                    
                     </div>
                     <div className="w-full h-[20%]  ">
-                      <div className="w-full h-full relative flex items-start justify-end">
-                        <h4 className="text-end">we turn customer data into margin</h4>
+                      <div className="w-full h-full relative flex items-start justify-end ">
+                        <h4 className="text-end w-[40%]">we turn customer data into margin</h4>
                         
                       </div>
                     </div>
@@ -112,7 +135,7 @@ export default function Page() {
                 </div>
                 <div className="w-full h-[40%]  relative">
                   <div className="w-full h-full relative flex justify-between">
-                    <div className="w-[35%] h-full flex flex-col relative">
+                    <div className="w-[30%] h-full flex flex-col relative">
                     <div className="w-full h-full relative">
                       <div className="w-full h-[90%]  px-[1vw]">
                         <div className="w-full h-[40vh] relative flex items-end justify-end ">

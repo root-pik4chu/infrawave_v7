@@ -24,7 +24,7 @@ export default function Home() {
           }, 2000)
   },[])
   return (
-  <>
+  <div className="">
     <AnimatePresence mode="wait">
       {isLoading && <Preloader />}
     </AnimatePresence>
@@ -42,7 +42,7 @@ export default function Home() {
     <WhyUsPage />     
     <FAQ />      
     <div className="w-full h-[5vh]"></div>
-  </>
+  </div>
   
   );
 }
