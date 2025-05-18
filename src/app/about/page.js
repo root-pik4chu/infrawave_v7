@@ -1,11 +1,10 @@
-
 'use client';
 
 import { useEffect, useRef } from 'react';
 import { MdArrowOutward } from 'react-icons/md';
 import gsap from 'gsap';
 
-export default function page({
+export default function Page({
     text = "root",
     textSize = "text-[1.2vw]",
     padding = "p-[1vw]",
