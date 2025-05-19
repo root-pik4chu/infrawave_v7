@@ -34,7 +34,7 @@ export default function Home() {
 
     <ServiceSection />
     {/* <div className="w-full h-[80vh] bg-red-500"></div> */}
-    <div className="w-full h-[50vh]  flex flex-col justify-end items-center pb-[5vh]">
+    <div className="w-full h-[80vh] md:h-[50vh]  flex flex-col justify-end items-center pb-[5vh]">
     <IconsScroller />
     </div>
 

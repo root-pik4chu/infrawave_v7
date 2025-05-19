@@ -4,6 +4,7 @@
   --background: #E6E6E6;
   --foreground: #171717;
   --text-color: #2C2C2C;
+  --heading: 'heading';
 }
 
 @theme inline {
@@ -15,7 +16,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #E6E6E6;
+    --background: #f9f9f9;
     --foreground: #171717;
     --text-color: #2C2C2C;
   }
@@ -29,63 +30,131 @@ body {
   padding: 0;
   min-height: 100vh;
 }
+
+@font-face {
+  font-family: 'heading';
+  src: url("../fonts/ANTON-REGULAR.TTF");
+}
+
 @font-face {
   font-family: smallheading;
   src: url("../fonts/jetbrainsmono/JETBRAINSMONO-VARIABLEFONT_WGHT_0.TTF");
 }
 
-@font-face {
-  font-family: heading;
-  src: url("../fonts/ANTON-REGULAR.TTF");
-}
-
 h1,button,p{
   z-index: 11;
 }
+
 Image{
   z-index: 10;
 }
-p,h2,h3,h4 , a{
+
+h1,p,h2,h3,h4, a{
   text-transform: uppercase;
-  /* color: #2C2C2C; */
+  color: #2C2C2C;
 }
+
+/* Service Section Specific Styles */
+.service-heading {
+  font-size: 5vw;
+  line-height: 5vw;
+  font-family: heading;
+}
+
 h1{
   font-size: 10vw;
   font-family: heading;
-  line-height: vw;
-  /* color:#2C2C2C; */
-
+  line-height: 10vw;
 }
+
 h3{
   font-family: smallheading;
   font-size: 5.2vw;
-
-
 }
+
 h4{
   font-family: smallheading;
   font-size: 1.2vw;
-  
-
-
 }
 
 h2{
   font-family: heading;
   font-size: 2vw;
   line-height: 2.1vw;
- 
-
 }
+
 p{
   font-family: smallheading;
   font-size: .9vw;
-  /* font-size: 1.2vw; */
   line-height: 1vw;
- 
+}
+
+/* Mobile Responsive Font Sizes */
+@media screen and (max-width: 768px) {
+  .service-heading {
+    font-size: 15vw;
+    line-height: 15vw;
+  }
+
+  h1 {
+    font-size: 23vw;
+    line-height: 23vw;
+  }
+
+  h2 {
+    font-size: 8vw;
+    line-height: 8.5vw;
+  }
+
+  h3 {
+    font-size: 7vw;
+  }
+
+  h4 {
+    font-size: 4vw;
+  }
+
+  p {
+    font-size: 3.5vw;
+    line-height: 4vw;
+  }
+}
+
+/* Tablet Responsive Font Sizes */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .service-heading {
+    font-size: 8vw;
+    line-height: 8vw;
+  }
+
+  h1 {
+    font-size: 12vw;
+    line-height: 12vw;
+  }
+
+  h2 {
+    font-size: 5vw;
+    line-height: 5.5vw;
+  }
+
+  h3 {
+    font-size: 6vw;
+  }
+
+  h4 {
+    font-size: 2.5vw;
+  }
+
+  p {
+    font-size: 2vw;
+    line-height: 2.5vw;
+  }
 }
 
 Footer{
   background-color: #FF5151;
-  /* color: #E6E6E6; */
 }
+
+
+
+

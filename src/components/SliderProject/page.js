@@ -86,7 +86,7 @@ const FiveProjectSlider = () => {
           ref={containerRef}
           className="w-full h-[100vh] overflow-hidden "
         >
-           <div className="w-full h-[25vh] flex items-end px-[1vw]  "> <h1 >projects</h1></div>
+           <div className="w-full h-[25vh] flex items-end md:justify-start justify-center px-[1vw]  "> <h1 className="md:text-[10vw] text-[20vw]" >projects</h1></div>
           {/* Row of projects that moves horizontally */}
           <div ref={sliderRef} className="flex gap-8 h-full p-8">
             {projects.map((item, index) => {
@@ -95,7 +95,7 @@ const FiveProjectSlider = () => {
                 style={{backgroundColor: item.color}}
                 key={`project-${index}`}
                   ref={addProjectRef}
-                  className="project w-[25vw] h-[60vh]  flex-shrink-0 flex items-center justify-center flex-col  shadow-lg  transform z-[100] p-[.5vw]   bg-white"
+                  className="project md:w-[25vw] w-[89vw] md:h-[60vh] h-[60vh]  flex-shrink-0 flex items-center justify-center flex-col  shadow-lg  transform z-[100] p-[.5vw]   bg-white"
                 >
                   <div className="w-full h-[60%]">
                     {/* rounded-4xl */}
@@ -108,8 +108,8 @@ const FiveProjectSlider = () => {
                                   />
                   </div>
                   <div className="w-full h-[40%] pt-[1vw] grid grid-rows-1">
-                    <h2 className="lowercase">{item.name}</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis maxime officia consectetur asperiores harum repellendus nam ut libero repellat.</p>
+                    <h2 className="lowercase ">{item.name}</h2>
+                    <p className="text-justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis maxime officia consectetur asperiores harum repellendus nam ut libero repellat.</p>
                   </div>
                 </div>
               );

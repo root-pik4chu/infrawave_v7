@@ -62,7 +62,7 @@ export default function Page() {
       "a"
     );
   }, []);
-// bg-[#FF4E27]
+  // bg-[#FF4E27]
   return (
     <>
       <div>
@@ -82,53 +82,61 @@ export default function Page() {
             {/* Top section */}
             <div className="w-full h-[110vh] relative">
               <div className="absolute -top-[10vw] -right-[10vw] rounded-full">
-                                <Image src="/Rectangle98.svg" width={200} height={200} className="w-[50vw] h-[50vw] object-cover lg:w-[40vw] lg:h-[40vw] "alt="img" />
-
+                <Image
+                  src="/Rectangle98.svg"
+                  width={200}
+                  height={200}
+                  className="w-[50vw] h-[50vw] object-cover lg:w-[40vw] lg:h-[40vw] "
+                  alt="img"
+                />
               </div>
               <div className="absolute top-[55vh] -left-[6vw]  rounded-full">
-                <Image src="/Rectangle98.svg" width={200} height={200} className="w-[50vw] h-[50vw] object-cover lg:w-[40vw] lg:h-[40vw] " alt="img" />
-
-
+                <Image
+                  src="/Rectangle98.svg"
+                  width={200}
+                  height={200}
+                  className="w-[50vw] h-[50vw] object-cover lg:w-[40vw] lg:h-[40vw] "
+                  alt="img"
+                />
               </div>
               <div className="w-full h-[10vh]"></div>
               <div className="w-full h-full flex flex-col">
                 <div className="w-full h-[45vh]  flex ">
                   <div className="w-[50%] h-full   relative">
                     <div className="w-full h-full relative flex items-end justify-start ">
-                    <h1 style={{fontSize:"24vw", lineHeight:"22vw"}}>INFRA</h1>
-
+                      <h1 style={{ fontSize: "24vw", lineHeight: "22vw" }}>
+                        INFRA
+                      </h1>
                     </div>
                   </div>
                   <div className="w-[50%] h-full flex flex-col px-[1vw] gap-[3vw]">
                     <div className="w-full h-[80%]  flex justify-end">
-                    <div className="w-[40%] h-full  flex justify-start items-end flex-col gap-[1vw] pt-[1vw]">
-                      <HoverButton 
-                      
-                      text = "contact"
-    textSize = "text-[1vw]"
-    padding = "p-[1vw]"
-    width = "w-[13vw]"
-    height = "h-[4vw]"
-    bgColor = "bg-zinc-50"
-    textColor = "text-zinc-900"
-                      />
-                      <HoverButton 
-                      
-                      text = "contact"
-    textSize = "text-[1vw]"
-    padding = "p-[1vw]"
-    width = "w-[13vw]"
-    height = "h-[4vw]"
-    bgColor = "bg-zinc-800"
-    textColor = "text-zinc-50"
-                      />
-                    </div>
-                    
+                      <div className="w-[40%] h-full  flex justify-start items-end flex-col gap-[1vw] pt-[1vw]">
+                        <HoverButton
+                          text="see our plans"
+                          textSize="text-[1.2vw]"
+                          padding="p-[1vw]"
+                          width="w-[13vw]"
+                          height="h-[4vw]"
+                          bgColor="bg-zinc-50"
+                          textColor="text-zinc-900"
+                        />
+                        <HoverButton
+                          text="work wit us"
+                          textSize="text-[1.2vw]"
+                          padding="p-[1vw]"
+                          width="w-[13vw]"
+                          height="h-[4vw]"
+                          bgColor="bg-zinc-800"
+                          textColor="text-zinc-50"
+                        />
+                      </div>
                     </div>
                     <div className="w-full h-[20%]  ">
                       <div className="w-full h-full relative flex items-start justify-end ">
-                        <h4 className="text-end w-[40%]">we turn customer data into margin</h4>
-                        
+                        <h4 className="text-end w-[40%]">
+                          we turn customer data into margin
+                        </h4>
                       </div>
                     </div>
                   </div>
@@ -136,23 +144,28 @@ export default function Page() {
                 <div className="w-full h-[40%]  relative">
                   <div className="w-full h-full relative flex justify-between">
                     <div className="w-[30%] h-full flex flex-col relative">
-                    <div className="w-full h-full relative">
-                      <div className="w-full h-[90%]  px-[1vw]">
-                        <div className="w-full h-[40vh] relative flex items-end justify-end ">
-                          <h4 className="text-justify">Infrawave Solutions empowers businesses with cutting-edge digital services, offering web and mobile app development, AI/ML solutions, blockchain integration, and innovative technology for seamless digital transformation.</h4>
+                      <div className="w-full h-full relative">
+                        <div className="w-full h-[90%]  px-[1vw]">
+                          <div className="w-full h-[40vh] relative flex items-end justify-end ">
+                            <h4 className="text-justify">
+                              Infrawave Solutions empowers businesses with
+                              cutting-edge digital services, offering web and
+                              mobile app development, AI/ML solutions,
+                              blockchain integration, and innovative technology
+                              for seamless digital transformation.
+                            </h4>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="w-[50%] h-full   relative">
-                    <div className="w-full h-full relative flex items-end justify-end">
-                    <h1 style={{fontSize:"24vw", lineHeight:"22vw"}}>WAVE</h1>
-
+                    <div className="w-[50%] h-full   relative">
+                      <div className="w-full h-full relative flex items-end justify-end">
+                        <h1 style={{ fontSize: "24vw", lineHeight: "22vw" }}>
+                          WAVE
+                        </h1>
+                      </div>
                     </div>
-
                   </div>
-                  </div>
-
                 </div>
               </div>
             </div>
@@ -225,5 +238,4 @@ export default function Page() {
       </div>
     </>
   );
-};
-
+}

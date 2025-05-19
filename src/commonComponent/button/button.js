@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react';
 import { MdArrowOutward } from 'react-icons/md';
 import gsap from 'gsap';
+import { Heading } from 'lucide-react';
 
 export default function HoverButton({
     text = "root",
@@ -53,19 +54,20 @@ export default function HoverButton({
       <button
       ref={hoverRef}
       className={`${width} ${height} ${bgColor} flex items-center justify-center relative overflow-hidden ${textColor}  cursor-pointer p-[0.2vw] rounded`}
+      style={{fontFamily:"var(--heading)"}}
     >
       <div className={`w-[70%] h-full flex items-center justify-center relative overflow-hidden`}>
         <span
           ref={upperTextRef}
           className={`absolute top-0 left-0 w-full h-full flex items-center justify-center ${padding}`}
         >
-          <h4 className={`${textSize} ${textColor}`}>{text}</h4>
+          <h6 className={`${textSize} ${textColor} `}>{text}</h6>
         </span>
         <span
           ref={lowerTextRef}
           className={`absolute top-0 left-0 w-full h-full flex items-center justify-center translate-y-full ${padding}`}
         >
-          <h4 className={`${textSize} ${textColor}`}>{text}</h4>
+          <h6 className={`${textSize} ${textColor} `}>{text}</h6>
         </span>
       </div>
 

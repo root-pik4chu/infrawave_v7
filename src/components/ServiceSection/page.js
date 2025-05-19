@@ -31,8 +31,9 @@ export default function Page() {
   const isSmallScreen = mounted && windowSize.width < 1440;
 
   return (
-    <div className="w-full h-[380vh] flex flex-col items-start px-[2vw] text-[var(--text-color)]">
-      <div className="w-full h-[20vh] flex items-center">
+    <div className="w-full h-[380vh] relative">
+      <div className="w-full h-[99%] flex flex-col items-start px-[2vw] text-[var(--text-color)]">
+      <div className="w-full md:h-[20vh] h-[50vh] bg-red-500 flex items-center">
         <h1>Service Section</h1>
       </div>
       <div className="w-full h-full relative">
@@ -53,15 +54,15 @@ export default function Page() {
                   zIndex: 100 - i,
                 }}
               >
-                <div className="relative flex md:flex-row flex-col justify-between w-full h-full md:p-[1vw] p-[5vw] text-[var(--text-color)]">
-                  <h1 style={{fontSize: "5vw", lineHeight:"5vw"}} className="md:w-[33%] lowercase">{item.Name}</h1>
+                <div className="relative flex md:flex-row flex-col justify-between w-full h-full md:p-[1vw] p-[5vw] text-black">
+                  <h2 className="md:w-[33%] lowercase service-heading">{item.Name}</h2>
                   <p className="md:w-[33%] text-justify">
                     {item.Desc}
                   </p>
-                  <div className="md:w-[20%] w-full h-full">
+                  <div className="md:w-[20%] w-40% h-[50%]">
                     <Image
                       width={500}
-                      height={500}
+                      height={300}
                       className="w-full h-full object-cover"
                       src="/img.png"
                       alt=""
@@ -73,8 +74,9 @@ export default function Page() {
           );
         })}
       </div>
-      {mounted && isSmallScreen && <div className="w-full h-[40vh]"></div>}
-      <div className="w-full h-[90vh]"></div>
+      {mounted && isSmallScreen && <div className="w-full h-[60vh]"></div>}
+      <div className="w-full h-[100vh] "></div>
+    </div>
     </div>
   );
 };
