@@ -40,7 +40,7 @@ const SwipperData = () => {
 
   return (
     <>
-      <div className="w-full h-[70%]">
+      <div className="w-full h-[80%]">
         <div className="w-full h-[10%] flex items-center ">
           <div
             ref={prevRef}

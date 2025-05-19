@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function AboutSection() {
   return (
-    <div className="w-full h-[100vh] relative  overflow-hidden ">
+    <div className="w-full h-[90vh] md:h-[100vh] relative  overflow-hidden ">
       
       <div className="w-full h-[90%] relative " >
         <div className="absolute top-[10vh] -left-[20vw] rounded-full z-0">
@@ -17,8 +17,8 @@ export default function AboutSection() {
         <div className="w-full h-full relative">
           <h1 className="px-[1vw] z-50">About us</h1>
           
-          <div className="w-full h-screen flex justify-end pt-[5vw]">
-          <div className="flex items-center justify-center gap-[5vw] w-[70%] h-[40%] ">
+          <div className="w-full md:h-screen    flex justify-end pt-[5vw]">
+          <div className="flex items-center md:justify-center justify-start md:flex-row flex-col gap-[5vw] w-[70%] h-[40%] ">
             {[1, 2, 3].map((index, item) => {
               return (
                 <div key={index} className="flex items-start justify-between flex-col gap-[2vw]">
