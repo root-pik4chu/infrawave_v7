@@ -8,7 +8,7 @@ import { Heading } from 'lucide-react';
 export default function HoverButton({
     text = "root",
     textSize = "text-[1vw]",
-    padding = "p-[1vw]",
+    padding = "1vw",
     width = "w-[10vw]",
     height = "h-[3vw]",
     bgColor = "bg-zinc-50",
@@ -24,7 +24,6 @@ export default function HoverButton({
     const hoverEl = hoverRef.current;
     const upperText = upperTextRef.current;
     const lowerText = lowerTextRef.current;
-
 
     const handleEnter = () => {
       gsap.set([upperText], { y: '0%' });
@@ -50,58 +49,30 @@ export default function HoverButton({
   }, []);
 
   return (
-       
-      <button
+    <button
       ref={hoverRef}
-      className={`${width} ${height} ${bgColor} flex items-center justify-center relative overflow-hidden ${textColor}  cursor-pointer p-[0.2vw] rounded`}
-      style={{fontFamily:"var(--heading)"}}
+      className={`${width} ${height} ${bgColor} flex items-center justify-center relative overflow-hidden ${textColor} cursor-pointer rounded`}
+      style={{
+        fontFamily: "var(--smallheading)",
+        padding: padding
+      }}
     >
-      <div className={`w-[70%] h-full flex items-center justify-center relative overflow-hidden`}>
+      <div className="w-[70%] h-full flex items-center justify-center relative overflow-hidden">
         <span
           ref={upperTextRef}
-          className={`absolute top-0 left-0 w-full h-full flex items-center justify-center ${padding}`}
+          className="absolute top-0 left-0 w-full h-full flex items-center justify-center"
+          style={{ padding: padding }}
         >
-          <h6 className={`${textSize} ${textColor} `}>{text}</h6>
+          <h6 className={`${textSize} ${textColor}`}>{text}</h6>
         </span>
         <span
           ref={lowerTextRef}
-          className={`absolute top-0 left-0 w-full h-full flex items-center justify-center translate-y-full ${padding}`}
+          className="absolute top-0 left-0 w-full h-full flex items-center justify-center translate-y-full"
+          style={{ padding: padding }}
         >
-          <h6 className={`${textSize} ${textColor} `}>{text}</h6>
+          <h6 className={`${textSize} ${textColor}`}>{text}</h6>
         </span>
       </div>
-
-      
     </button>
-   
-  )
+  );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// export default function HoverButton({
-//   text = "root",
-//   textSize = "text-[1.2vw]",
-//   padding = "p-[1vw]",
-//   width = "w-[10vw]",
-//   height = "h-[3vw]",
-//   bgColor = "bg-zinc-50",
-//   arrowColor = "bg-zinc-900",
-//   arrowSize = "text-[1.6vw]"
-// }) {
-  
-//   return (
-    
-//   );
-// }

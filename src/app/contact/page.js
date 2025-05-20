@@ -1,61 +1,66 @@
-"use client"
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-import React from 'react'
+import React  from 'react';
 
-const page = ({text="root"}) => {
 
-   
 
+const Contact = () => {
+ 
+  // const ParallaxImage = dynamic(() => import("../parallaxImage/ParallaxImage"), {
+  //   ssr: false,
+  //   loading: () => <div className="h-[300px] bg-gray-900 animate-pulse" />,
+  // });
   return (
-    <div className="bg-zinc-950 w-full h-[250vh] flex items-center justify-center flex-col">
+    <>
+    
 
-        {
-  [1, 2, 3, 4, 5, 6].map((_, i) => {
-    const staggerOffset = i * 100;
 
-    return (
-      <div
-        key={i}
-        className="md:h-[14.5vw] h-[50vh] sticky top-[20vh]"
-        style={{ color: "#fff" }}
-      >
-        <motion.div
-          className="flex flex-col relative md:h-[40vh] h-[550px] w-[100%] origin-top md:px-[1vw]"
-          style={{
-            backgroundColor: "#FF4E27",
-            translateY: staggerOffset,
-            zIndex: 100 - i,
-          }}
-        >
-          <div className="relative flex md:flex-row flex-col justify-between w-full h-full md:p-[1vw] p-[5vw] text-black">
-            <h2 className="md:w-[33%] lowercase">project Name</h2>
-            <p className="md:w-[33%] text-justify">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere
-              doloremque esse suscipit eveniet exercitationem iusto atque nisi?
-              Id, corrupti voluptatum minus quidem aut perferendis, aliquid sit
-              quos officiis ut perspiciatis.
-            </p>
-            <div className="md:w-[20%] w-full h-full">
-              <Image
-              width={500}
-              height={500}
-                className="w-full h-full object-cover rounded-[.8vw]"
-                src="/img.png"
-                alt=""
-              />
-            </div>
-          </div>
-        </motion.div>
+    <div className=" h-screen px-6 py-12 flex items-center">
+      <div className="  w-full grid grid-cols-12 gap-y-8 gap-x-6">
+        {/* Heading */}
+        <h1 className="col-start-1 col-end-13 text-7xl md:text-8xl font-bold text-black">
+          Get in touch
+        </h1>
+
+        {/* Name input */}
+        <div className="col-start-1 col-end-13 md:col-end-7">
+          <input
+            type="text"
+            placeholder="Enter your name"
+            className="w-full bg-transparent border-b border-black text-black placeholder-black text-xl focus:outline-none py-2"
+          />
+        </div>
+
+        {/* Email input */}
+        <div className="col-start-1 col-end-13 md:col-start-7 md:col-end-13">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            className="w-full bg-transparent border-b border-black text-black placeholder-black text-xl focus:outline-none py-2"
+          />
+        </div>
+
+        {/* Message input */}
+        <div className="col-start-1 col-end-13">
+          <textarea
+            placeholder="How can we help?"
+            rows={4}
+            className="w-full bg-transparent border-b border-black text-black placeholder-black text-xl focus:outline-none py-2"
+          />
+        </div>
+
+        {/* Submit button */}
+        <div className="col-start-1 col-end-13">
+          <button className="w-full bg-zinc-200 text-black text-xl font-medium py-4 cursor-pointer">
+            Get in touch
+          </button>
+        </div>
       </div>
-    );
-  })
-}
-
-
-       
     </div>
-  )
-}
+     
 
-export default page
+  
+    </>
+    
+  );
+};
+
+export default Contact; 
