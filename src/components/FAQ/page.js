@@ -68,7 +68,7 @@ export default function FlipCardsGrid() {
         {cardData.map((card, index) => (
           <div
             key={index}
-            className="perspective-1000 h-[35vh] md:h-[40vh] cursor-pointer group"
+            className="perspective-1000 h-[35vh] md:h-[40vh] cursor-pointer group "
             onClick={() => handleCardClick(index)}
           >
             <div
@@ -77,12 +77,12 @@ export default function FlipCardsGrid() {
               } group-hover:rotate-y-180 lg:group-hover:rotate-y-180`}
             >
               {/* Front */}
-              <Card className="absolute w-full h-full backface-hidden p-4 md:p-6 bg-zinc-100 rounded-lg shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
+              <Card className="absolute w-full h-full backface-hidden p-4 md:p-6 bg-zinc-200 rounded-lg shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
                 <h2 className="text-lg md:text-xl lg:text-2xl font-medium">{card.question}</h2>
               </Card>
 
               {/* Back */}
-              <Card className="absolute w-full h-full backface-hidden p-4 md:p-6 bg-zinc-100 rounded-lg rotate-y-180 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
+              <Card className="absolute w-full h-full backface-hidden p-4 md:p-6 bg-zinc-200 rounded-lg rotate-y-180 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
                 <p className="text-sm md:text-base lg:text-lg">{card.answer}</p>
               </Card>
             </div>

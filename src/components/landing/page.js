@@ -171,9 +171,61 @@ export default function Page() {
                 </div>
               </div>
             </div>
-            <div className="w-full h-[100vh] relative block md:hidden bg-red-500 ">
+            <div className="w-full h-[100vh] relative block md:hidden overflow-hidden">
+            <div className="absolute top-[60vh] -left-[20vw]  rounded-full">
+                <Image
+                  src="/Rectangle98.svg"
+                  width={200}
+                  height={200}
+                  className="w-[50vw] h-[50vw] object-cover lg:w-[40vw] lg:h-[40vw] "
+                  alt="img"
+                />
+              </div>
+              <div className="absolute top-[10vh] -right-[20vw]  rounded-full">
+                <Image
+                  src="/Rectangle98.svg"
+                  width={200}
+                  height={200}
+                  className="w-[50vw] h-[50vw] object-cover lg:w-[40vw] lg:h-[40vw] "
+                  alt="img"
+                />
+              </div>
+              <div className="w-full h-[100%] relative flex items-start justify-start flex-col px-[2vw]">
+                <div className="w-full h-[60%] relative flex flex-col justify-end">
+                <div className="w-full h-fit  flex flex-col">
+                <h1 style={{ fontSize: "40vw", lineHeight: "40vw" }}>Infra</h1>
+                <h1 style={{ fontSize: "45vw", lineHeight: "40vw" }}>wave</h1>
+                </div>
+                <div className="w-full ">
+                  <h3>we turn customer data into margin</h3>
+                </div>
+                </div>
+                <div className="w-full h-[40%] relative gap-[10vw] flex flex-col justify-end">
+                  
+                  <div className="w-full flex justify-between">
+                  <HoverButton
+                          text="work wit us"
+                          textSize="text-[5.2vw]"
+                          padding="p-[1vw]"
+                          width="w-[45vw]"
+                          height="h-[15vw]"
+                          bgColor="bg-zinc-800"
+                          textColor="text-zinc-50"
+                        />
 
-
+<HoverButton
+                          text="see our plans"
+                          textSize="text-[5.2vw]"
+                          padding="p-[1vw]"
+                          width="w-[45vw]"
+                          height="h-[15vw]"
+                          bgColor="bg-zinc-200"
+                          textColor="text-zinc-950"
+                        />
+                  </div>
+                  <p style={{ fontSize: "5vw",lineHeight:"6vw" }} className="text-[2.2vw] text-justify">Infrawave Solutions empowers businesses with cutting-edge digital services, offering web and mobile app development, AI/ML solutions, blockchain integration, and innovative technology for seamless digital transformation.</p>
+                </div>
+              </div>
             </div>
             {/* Animation section */}
             <div

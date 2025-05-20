@@ -13,7 +13,7 @@ export default function WhyUsPage(){
         </div>
         <div className="w-full h-[88vh] flex items-center justify-center flex-col ">
             
-          <div className="w-[72%] h-full"><SwipperScroller /></div>
+          <div className="md:w-[72%] w-[90%] h-full"><SwipperScroller /></div>
         </div>
       </div>
     </div>

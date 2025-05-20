@@ -86,7 +86,7 @@ const FiveProjectSlider = () => {
           ref={containerRef}
           className="w-full h-[100vh] overflow-hidden "
         >
-           <div className="w-full h-[25vh] flex items-end md:justify-start justify-center px-[1vw]  "> <h1 className="md:text-[10vw] text-[20vw]" >projects</h1></div>
+           <div className="w-full h-[25vh] flex items-end justify-start  px-[1vw]  "> <h1 className="md:text-[10vw] text-[20vw]" >projects</h1></div>
           {/* Row of projects that moves horizontally */}
           <div ref={sliderRef} className="flex gap-8 h-full p-8">
             {projects.map((item, index) => {

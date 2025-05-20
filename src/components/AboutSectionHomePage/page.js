@@ -18,7 +18,7 @@ export default function AboutSection() {
           <h1 className="px-[1vw] z-50">About us</h1>
           
           <div className="w-full md:h-screen    flex justify-end pt-[5vw]">
-          <div className="flex items-center md:justify-center justify-start md:flex-row flex-col gap-[5vw] w-[70%] h-[40%] ">
+          <div className="flex items-center md:justify-center justify-start md:flex-row flex-col md:gap-[5vw] gap-[15vw] w-[70%] h-[40%] ">
             {[1, 2, 3].map((index, item) => {
               return (
                 <div key={index} className="flex items-start justify-between flex-col gap-[2vw]">

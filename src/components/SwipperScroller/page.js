@@ -84,11 +84,11 @@ const SwipperData = () => {
             {cardData.map((card, index) => (
               <SwiperSlide key={index}>
                 {/* rounded-xl */}
-                <div className="bg-zinc-300 p-4  shadow-md h-full grid grid-rows-2 py-[3vw] text-start ">
+                <div className="bg-zinc-200 p-4  shadow-md h-full grid grid-rows-2 py-[3vw] text-start ">
                   <h2 className="text-lg font-semibold lowercase leading-tight line-clamp-2">
                     {card.title}
                   </h2>
-                  <p className="text-sm text-gray-600 leading-relaxed line-clamp-3">
+                  <p className="text-sm leading-relaxed line-clamp-3">
                     {card.description}
                   </p>
                 </div>
@@ -154,6 +154,47 @@ const SwipperData = () => {
           left: 92%;
           --swiper-navigation-size: 20px;
           background-color: #171717;
+        }
+
+        /* Media Queries */
+        @media screen and (max-width: 768px) {
+          .swiper-button-next {
+            width: 40px;
+            height: 40px;
+            left: 85%;
+            --swiper-navigation-size: 16px;
+          }
+          
+          .swiper-button-prev {
+            width: 40px;
+            height: 40px;
+            left: 75%;
+            --swiper-navigation-size: 16px;
+          }
+
+          .swiper-slide {
+            font-size: 16px;
+          }
+        }
+
+        @media screen and (max-width: 480px) {
+          .swiper-button-next {
+            width: 35px;
+            height: 35px;
+            left: 80%;
+            --swiper-navigation-size: 14px;
+          }
+          
+          .swiper-button-prev {
+            width: 35px;
+            height: 35px;
+            left: 75%;
+            --swiper-navigation-size: 14px;
+          }
+
+          .swiper-slide {
+            font-size: 14px;
+          }
         }
       `}</style>
     </>
