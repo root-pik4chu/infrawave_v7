@@ -19,6 +19,8 @@ export default function Page() {
     // Create a timeline for coordinated animations
     gsap.registerPlugin(ScrollTrigger);
 
+    const isMobile = window.innerWidth < 768; // Check if mobile device
+
     const t1 = gsap.timeline({
       scrollTrigger: {
         trigger: box.current,
@@ -26,8 +28,8 @@ export default function Page() {
         end: "+=300", // End animation after scrolling 300px
         scrub: 1, // Smoother scrubbing with slight delay
         // markers: true,       // Keep markers for debugging (remove in production)
-        pin: true,
-        anticipatePin: 1, // Keep pinning behavior
+        pin: !isMobile, // Only pin on non-mobile devices
+        anticipatePin: !isMobile ? 1 : 0, // Only anticipate pin on non-mobile devices
       },
     });
 
@@ -66,7 +68,7 @@ export default function Page() {
   return (
     <>
       <div>
-        <div className="w-[100%] h-[250vh] text-[var(--text-color)]">
+        <div className="w-[100%] md:h-[250vh] h-[160vh] text-[var(--text-color)]">
           {/* <Lines /> --------------------------------------
         <div className=" top-0 left-0 w-full h-full z-[1] pointer-events-none px-[1vw] absolute ">
         <div className="flex w-full h-full justify-between ">
@@ -80,7 +82,7 @@ export default function Page() {
           {/* -------------------------------------------- */}
           <div className="w-full h-full overflow-hidden">
             {/* Top section */}
-            <div className="w-full h-[110vh] relative">
+            <div className="w-full h-[110vh] relative md:block hidden">
               <div className="absolute -top-[10vw] -right-[10vw] rounded-full">
                 <Image
                   src="/Rectangle98.svg"
@@ -169,11 +171,14 @@ export default function Page() {
                 </div>
               </div>
             </div>
+            <div className="w-full h-[100vh] relative block md:hidden bg-red-500 ">
 
+
+            </div>
             {/* Animation section */}
             <div
               ref={box}
-              className="relative w-full h-[100vh] flex items-center justify-center z-20 mt-[2vw]"
+              className="relative w-full md:h-[100vh] h-[60vh] flex items-center justify-center z-20 mt-[2vw]"
             >
               <div className="w-full h-full  sticky flex items-center justify-between">
                 <div className="relative w-full h-full flex">
