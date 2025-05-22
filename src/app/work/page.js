@@ -70,8 +70,8 @@ export default function page() {
               padding="1vw md:.5vw"
               width="w-[40vw] md:w-[15vw] lg:w-[10vw]"
               height="h-[8vw] md:h-[4vw] lg:h-[2vw]"
-              bgColor="bg-zinc-800"
-              textColor="text-zinc-50"
+              bgColor="bg-zinc-50"
+              textColor="text-zinc-950"
             />
           ))}
         </div>

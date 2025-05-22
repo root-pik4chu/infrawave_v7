@@ -33,7 +33,7 @@ body {
 
 @font-face {
   font-family: 'heading';
-  src: url("../fonts/ANTON-REGULAR.TTF");
+  src: url("../fonts/SPACEGROTESK-VARIABLEFONT_WGHT.TTF");
 }
 
 @font-face {
@@ -50,26 +50,21 @@ Image{
 }
 
 h1,p,h2,h3,h4, a{
-  text-transform: uppercase;
+  text-transform: capitalize;
   color: #2C2C2C;
 }
 
-/* Service Section Specific Styles */
-.service-heading {
-  font-size: 5vw;
-  line-height: 5vw;
-  font-family: heading;
-}
 
 h1{
-  font-size: 10vw;
+  font-size: 5vw;
   font-family: heading;
-  line-height: 10vw;
+  line-height: 5vw;
+  font-weight: 900;
 }
 
 h3{
   font-family: smallheading;
-  font-size: 5.2vw;
+  font-size: 3.2vw;
 }
 
 h4{
@@ -89,16 +84,17 @@ p{
   line-height: 1vw;
 }
 
+.transparent{
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 /* Mobile Responsive Font Sizes */
 @media screen and (max-width: 768px) {
-  .service-heading {
-    font-size: 15vw;
-    line-height: 15vw;
-  }
-
+ 
   h1 {
-    font-size: 25vw;
-    line-height: 23vw;
+    font-size: 13vw;
+    line-height: 13vw;
   }
 
   h2 {
@@ -120,36 +116,6 @@ p{
   }
 }
 
-/* Tablet Responsive Font Sizes */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .service-heading {
-    font-size: 8vw;
-    line-height: 8vw;
-  }
-
-  h1 {
-    font-size: 12vw;
-    line-height: 12vw;
-  }
-
-  h2 {
-    font-size: 5vw;
-    line-height: 5.5vw;
-  }
-
-  h3 {
-    font-size: 6vw;
-  }
-
-  h4 {
-    font-size: 2.5vw;
-  }
-
-  p {
-    font-size: 2vw;
-    line-height: 2.5vw;
-  }
-}
 
 Footer{
   background-color: #FF5151;

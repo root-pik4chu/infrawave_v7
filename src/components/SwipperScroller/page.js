@@ -55,7 +55,7 @@ const SwipperData = () => {
             &gt;
           </div>
         </div>
-        <div className="w-full h-[80%]">
+        <div className="w-full h-[70%] ">
           <Swiper
             spaceBetween={10}
             slidesPerView={3.2}
@@ -83,12 +83,12 @@ const SwipperData = () => {
           >
             {cardData.map((card, index) => (
               <SwiperSlide key={index}>
-                {/* rounded-xl */}
-                <div className="bg-zinc-200 p-4  shadow-md h-full grid grid-rows-2 py-[3vw] text-start ">
-                  <h2 className="text-lg font-semibold lowercase leading-tight line-clamp-2">
+                <div className="rounded-2xl  bg-white/60 backdrop-blur-lg border border-zinc-300  p-6 h-full flex flex-col justify-between ">
+                  <h2 className="lowercase font-extrabold text-xl mb-2 relative text-gray-900">
                     {card.title}
+                    <span className="block w-8 h-1 bg-yellow-300 rounded-full mt-1"></span>
                   </h2>
-                  <p className="text-sm leading-relaxed line-clamp-3">
+                  <p className="text-base text-gray-700 leading-relaxed line-clamp-3">
                     {card.description}
                   </p>
                 </div>

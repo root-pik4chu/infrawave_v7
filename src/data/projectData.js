@@ -4,7 +4,7 @@ import { color } from "framer-motion";
 
 const projects = [
    {
-    color:"#dadada",
+    color:"#fff",
     //  color: "#3B82F6", // Blue-500
      name: "Next-Gen E-Commerce",
      description: "Build seamless and scalable e-commerce platforms with real-time data and advanced search algorithms.",
@@ -13,7 +13,8 @@ const projects = [
    {
     //  color: "#F472B6", // Pink-300
     // color:"#FF4E27",
-    color:"#dadada",
+    color:"#fff",
+
 
      name: "AI Chatbots",
      description: "Develop intelligent AI chatbots for customer service, powered by natural language processing (NLP).",
@@ -23,7 +24,8 @@ const projects = [
     //  color: "#10B981", // Green-500
     // color:"#FF4E27",
 
-    color:"#dadada",
+    color:"#fff",
+
 
      name: "Decentralized Finance (DeFi)",
      description: "Create decentralized applications (dApps) on the blockchain for secure and transparent financial services.",

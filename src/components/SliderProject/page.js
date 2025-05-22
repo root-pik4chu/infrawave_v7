@@ -38,7 +38,7 @@ const FiveProjectSlider = () => {
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top 0%",
-        end: "+=300%",
+        end: "+=380%",
         pin: true,
         scrub: 1,
         // markers: true,
@@ -70,7 +70,7 @@ const FiveProjectSlider = () => {
   return (
     <>
      <div
-        className="w-full h-[400vh]     text-[var(--text-color)]"
+        className="w-full h-[480vh]     text-[var(--text-color)]"
         // style={{
         //   backgroundImage:
         //     "url('https://www.lumina-design.co/static/media/i_project_bg.9a00241e79d94cfd91eb.png')",
@@ -92,24 +92,26 @@ const FiveProjectSlider = () => {
             {projects.map((item, index) => {
               return (
                 <div
-                style={{backgroundColor: item.color}}
+                style={{ backgroundColor: item.color }}
                 key={`project-${index}`}
-                  ref={addProjectRef}
-                  className="project md:w-[25vw] w-[89vw] md:h-[60vh] h-[60vh]  flex-shrink-0 flex items-center justify-center flex-col  shadow-lg  transform z-[100] p-[.5vw]   bg-white"
+                ref={addProjectRef}
+                className="project md:w-[25vw] w-[89vw] md:h-[60vh] h-[60vh] flex-shrink-0 flex items-center justify-center flex-col rounded-2xl shadow-2xl bg-white/60 backdrop-blur-lg border border-white/30 p-6 z-[100]"
                 >
-                  <div className="w-full h-[60%]">
-                    {/* rounded-4xl */}
+                  <div className="w-full h-[60%] rounded-xl overflow-hidden mb-4">
                     <Image
-                                  width={500}
-                                  height={500}
-                                    className="w-full h-full object-cover "
-                                    src="/img.png"
-                                    alt=""
-                                  />
+                      width={500}
+                      height={500}
+                      className="w-full h-full object-cover"
+                      src="/img.jpg"
+                      alt=""
+                    />
                   </div>
-                  <div className="w-full h-[40%] pt-[1vw] grid grid-rows-1">
-                    <h2 className="lowercase ">{item.name}</h2>
-                    <p className="text-justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis maxime officia consectetur asperiores harum repellendus nam ut libero repellat.</p>
+                  <div className="w-full h-[40%] pt-2 grid grid-rows-1">
+                    <h2 className="lowercase font-bold text-xl mb-2 relative">
+                      {item.name}
+                      <span className="block w-8 h-1 bg-yellow-300 rounded-full mt-1"></span>
+                    </h2>
+                    <p className="text-justify text-gray-700">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis maxime officia consectetur asperiores harum repellendus nam ut libero repellat.</p>
                   </div>
                 </div>
               );
