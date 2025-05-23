@@ -121,6 +121,17 @@ Footer{
   background-color: #FF5151;
 }
 
+/* Custom Selection Color */
+::selection {
+  background-color: rgb(43, 43, 45); /* bg-zinc-950 */
+  color: white;
+}
+
+::-moz-selection {
+  background-color: rgb(24 24 27); /* bg-zinc-950 */
+  color: white;
+}
+
 
 
 
