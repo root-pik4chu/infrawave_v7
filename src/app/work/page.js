@@ -1,6 +1,7 @@
 "use client"
 
 import HoverButton from '@/commonComponent/button/button';
+import Copy from '@/commonComponent/textEffect/Copy';
 import React from 'react';
 
 export default function page() {
@@ -79,7 +80,7 @@ export default function page() {
 
       <div className="w-full min-h-screen flex flex-col items-center justify-center gap-[10vh] p-[4vw] md:p-[1vw]">
         {projects.map((project, index) => (
-          <div key={project.id} className="outer w-full h-auto lg:h-[60vh] flex flex-col lg:flex-row items-center justify-between relative gap-6">
+          <div key={index} className="outer w-full h-auto lg:h-[60vh] flex flex-col lg:flex-row items-center justify-between relative gap-6">
             <div className="imageWrapper w-full lg:w-1/2 h-[40vh] lg:h-full object-cover">
               <div className="img w-full h-full overflow-hidden rounded-xl">
                 <img
@@ -96,8 +97,8 @@ export default function page() {
               <div className="first w-full h-full flex flex-col justify-between">
                 <div className="headingAndNumber w-full h-[20%]">
                   <div className="flex items-center justify-between">
-                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">{project.title}</h2>
-                    <p>{"[" + (index + 1).toString().padStart(2, '0') + "]"}</p>
+                    <Copy><h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">{project.title}</h2></Copy>
+                    <Copy><p>{"[" + (index + 1).toString().padStart(2, '0') + "]"}</p></Copy>
                   </div>
                 </div>
                 
@@ -105,34 +106,34 @@ export default function page() {
                   <div className="threeDivision w-full h-[35%] grid grid-cols-1 md:grid-cols-3 grid-rows-auto gap-4">
                     <div className="col-span-1 uppercase flex flex-col justify-between">
                       <div>
-                        <p>Live site</p>
-                        <h4>{project.liveSite}</h4>
+                        <Copy><p>Live site</p></Copy>
+                        <Copy><h4>{project.liveSite}</h4></Copy>
                       </div>
                       <div>
-                        <h4>view project</h4>
+                        <Copy><h4>view project</h4></Copy>
                       </div>
                     </div>
 
                     <div className="col-span-1 uppercase flex flex-col justify-between">
                       <div>
-                        <p>Industry</p>
-                        <h4>{project.industry}</h4>
+                        <Copy><p>Industry</p></Copy>
+                        <Copy><h4>{project.industry}</h4></Copy>
                       </div>
                       <div>
-                        <p>Published</p>
+                        <Copy><p>Published</p></Copy>
                         <h4>{project.published}</h4>
                       </div>
                     </div>
 
                     <div className="col-span-1 uppercase flex flex-col justify-start items-start lg:items-end">
-                      <p>tech stack</p>
+                      <Copy><p>tech stack</p></Copy>
                       {project.deliverables.map((item, i) => (
-                        <h4 key={i}>{item}</h4>
+                        <Copy><h4 key={i}>{item}</h4></Copy>
                       ))}
                     </div>
                   </div>
                   <div className="text-justify mt-4">
-                    <h4>{project.description}</h4>
+                    <Copy><h4>{project.description}</h4></Copy>
                   </div>
                 </div>
               </div>

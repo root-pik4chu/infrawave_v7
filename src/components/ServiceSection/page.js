@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import {services} from "@/data/cardsData";
+import Copy from "@/commonComponent/textEffect/Copy";
 
 const useWindowSize = () => {
   const [mounted, setMounted] = useState(false);
@@ -34,7 +35,7 @@ export default function Page() {
     <div className="w-full h-[380vh] relative">
       <div className="w-full md:h-[99%] h-[80%] flex flex-col items-start px-[2vw] text-[var(--text-color)]">
       <div className="w-full md:h-[20vh] h-[50vh]  flex items-center">
-        <h1>Service Section</h1>
+        <Copy><h1>Service Section</h1></Copy>
       </div>
       <div className="w-full h-full relative">
         {services.map((item, i) => {
@@ -57,14 +58,14 @@ export default function Page() {
               >
                 <div className="relative flex md:flex-row flex-col justify-between w-full h-full md:p-8 p-6 text-gray-800">
                   <div className="md:w-[33%] flex flex-col justify-center">
-                    <h2 className="lowercase font-extrabold text-3xl md:text-5xl mb-2 relative">
+                    <Copy><h2 className="lowercase font-extrabold text-3xl md:text-5xl mb-2 relative">
                       {item.Name}
                       <span className="block w-10 h-1 bg-yellow-300 rounded-full mt-2"></span>
-                    </h2>
+                    </h2></Copy>
                   </div>
-                  <p className="md:w-[33%] text-justify text-base md:text-lg font-medium flex items-center">
+                  <Copy><p className="md:w-[33%] text-justify text-base md:text-lg font-medium flex items-center">
                     {item.Desc}
-                  </p>
+                  </p></Copy>
                   <div className="md:w-[20%] w-full h-full flex items-center justify-center">
                     <Image
                       width={500}

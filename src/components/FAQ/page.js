@@ -1,3 +1,4 @@
+import Copy from "@/commonComponent/textEffect/Copy";
 import Image from "next/image";
 import React, { useState } from "react";
 
@@ -62,7 +63,7 @@ export default function FlipCardsGrid() {
         />
       </div> */}
 
-      <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 lg:w-[70%] w-full">FAQ</h1>
+      <Copy><h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 lg:w-[70%] w-full">FAQ</h1></Copy>
 
       <div className="w-full lg:w-[75%] lg:left-[12%] relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 z-10">
         {cardData.map((card, index) => (

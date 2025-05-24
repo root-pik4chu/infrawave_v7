@@ -3,6 +3,7 @@ import React from "react";
 
 import CountUp from "@/commonComponent/CountingUp/page";
 import Image from "next/image";
+import Copy from "@/commonComponent/textEffect/Copy";
 
 export default function AboutSection() {
   return (

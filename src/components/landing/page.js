@@ -9,6 +9,7 @@ import Link from "next/link";
 import Image from "next/image";
 import HoverButton from "@/commonComponent/button/button";
 import { MdOutlineArrowOutward } from "react-icons/md";
+import Copy from "@/commonComponent/textEffect/Copy";
 export default function Page() {
   const firstBox = useRef(null);
   const secondBox = useRef(null);
@@ -86,11 +87,11 @@ export default function Page() {
               <div className="md:w-[50%] w-full md:h-full h-[40%]  ">
                <div className="w-full h-full relative flex flex-col items-center justify-center">
                  <div className="md:w-[70%] w-[90%] md:h-[30%] h-[50%] flex flex-col items-start justify-start">
-                  <h1 className="">Infrawave
+                  <Copy><h1 className="">Infrawave
                     solutions
-                  </h1>
-                  <h4 className="md:w-full w-[80%]">we create world class digital products material that communicate clearly</h4>
-                 </div>
+                  </h1></Copy>
+                  <Copy><h4 className="md:w-full w-[80%]">we create world class digital products material that communicate clearly</h4></Copy>
+                 </div>fs c
                  <div className="md:w-[70%] w-[90%] h-[10%]">
                   
                  <HoverButton
@@ -106,9 +107,9 @@ export default function Page() {
                 
                  </div>
                  <div className="   absolute bottom-0 right-0   flex items-center justify-center rotate-[-90deg] origin-top-left translate-x-[90%] ">
-                  <h4 className="" >
+                  <Copy><h4 className="" >
                     developing things with minimum meetings
-                  </h4>
+                  </h4></Copy>
                  </div>
                </div>
               </div>
@@ -125,7 +126,7 @@ export default function Page() {
                       </div>
                     </div>
                     <div className="w-full h-[60%]  flex items-center justify-end font-extrabold p-[2vw]">
-                    <h4 style={{fontSize:"2.1vw" , lineHeight:"2.1vw" , }} className=" ">World-class digital media agency</h4>
+                    <Copy><h4 style={{fontSize:"2.1vw" , lineHeight:"2.1vw" , }} className=" ">World-class digital media agency</h4></Copy>
                     </div>
                     
                   </div>

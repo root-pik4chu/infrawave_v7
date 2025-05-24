@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import projects from "@/data/projectData"
 import Image from "next/image";
+import Copy from "@/commonComponent/textEffect/Copy";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -24,11 +25,11 @@ const MobileCard = ({ item, index }) => (
       />
     </div>
     <div className="w-full h-[40%] pt-2">
-      <h2 className="lowercase font-bold text-xl mb-2 relative">
+      <Copy><h2 className="lowercase font-bold text-xl mb-2 relative">
         {item.name}
         <span className="block w-8 h-1 bg-yellow-300 rounded-full mt-1"></span>
-      </h2>
-      <p className="text-justify text-gray-700">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis maxime officia consectetur asperiores harum repellendus nam ut libero repellat.</p>
+      </h2></Copy>
+      <Copy><p className="text-justify text-gray-700">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis maxime officia consectetur asperiores harum repellendus nam ut libero repellat.</p></Copy>
     </div>
   </div>
 );
