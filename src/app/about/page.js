@@ -1,5 +1,6 @@
 ;
 import HoverButton from "@/commonComponent/button/button";
+import Copy from "@/commonComponent/textEffect/Copy";
 import Image from "next/image";
 import React from "react";
 
@@ -38,25 +39,28 @@ export default function About() {
         <div className="w-full h-auto md:h-[30vh] relative flex flex-col justify-between items-end py-6 md:py-[2vw]">
           <div className="w-full md:w-[50%] h-full flex flex-col justify-between gap-6 md:gap-0">
             <div className="space-y-2 md:space-y-0">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl">Creative Montreal</h2>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl">web design & dev agency</h2>
+              <Copy><h2 className="text-3xl md:text-4xl lg:text-5xl">Creative Montreal</h2></Copy>
+              <Copy><h2 className="text-2xl md:text-3xl lg:text-4xl">web design & dev agency</h2></Copy>
             </div>
 
             <div className="space-y-2 md:space-y-0">
+              <Copy>
+
               <p className="text-sm md:text-base lg:text-lg">
                 We&apos;re a tight-knit and agile team ready to tackle projects of any
                 size, even for the biggest brands out there. We&apos;re skilled at
                 creating websites that will make your audience choose your
                 business over your competitors.
               </p>
+              </Copy>
             </div>
           </div>
         </div>
 
         <div className="w-full h-auto md:h-[20vh] relative flex py-6 md:py-0">
           <div className="w-full md:w-[40%] h-full relative flex flex-col justify-between gap-4 md:gap-0">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl">Forces</h1>
-            <p className="text-sm md:text-base lg:text-lg">Our agency is forged on a foundation of values and a mindset that allows us to transform projects into resounding successes.</p>
+            <Copy><h1 className="text-4xl md:text-5xl lg:text-6xl">Forces</h1></Copy>
+            <Copy><p className="text-sm md:text-base lg:text-lg">Our agency is forged on a foundation of values and a mindset that allows us to transform projects into resounding successes.</p></Copy>
           </div>
         </div>
 
@@ -64,8 +68,8 @@ export default function About() {
           {aboutData.map((item, index) => (
             <div key={index} className={`w-full h-auto md:h-[20vh] relative py-4 md:py-[1vw] ${index === 0 ? `border-t border-b` : `border-b`}`}>
               <div className="w-full md:w-[40%] h-full relative flex flex-col justify-between gap-4 md:gap-0">
-                <h2 className="text-xl md:text-2xl lg:text-3xl">{item.h2}</h2>
-                <p className="text-sm md:text-base lg:text-lg">{item.p}</p>
+                <Copy><h2 className="text-xl md:text-2xl lg:text-3xl">{item.h2}</h2></Copy>
+                <Copy><p className="text-sm md:text-base lg:text-lg">{item.p}</p></Copy>
               </div>
             </div>
           ))}
@@ -75,22 +79,22 @@ export default function About() {
           <div className="w-full h-full relative flex flex-col md:flex-row justify-between gap-8 md:gap-0 ">
             <div className="w-full md:w-[50%] h-full">
               <div className="w-full h-auto md:h-[70%] space-y-6 md:space-y-0">
-                <h2 className="text-2xl md:text-3xl lg:text-4xl">Why Infrawave ?</h2>
-                <h2 className="text-xl md:text-2xl lg:text-3xl">
+                <Copy><h2 className="text-2xl md:text-3xl lg:text-4xl">Why Infrawave ?</h2></Copy>
+                <Copy><h2 className="text-xl md:text-2xl lg:text-3xl">
                   Infrawave Digital is born from the
                   dynamic fusion of design, technology,
                   and business development, crafting
                   captivating, functional solutions for
                   businesses.
-                </h2>
+                </h2> </Copy>
               </div>
               <div className="w-full h-auto md:h-[25%] flex items-end justify-end mt-6 md:mt-0 ">
                 <div className="w-full md:w-[60%] h-full text-justify flex flex-col justify-between gap-6 md:gap-0">
-                  <p className="text-sm md:text-base lg:text-lg">
+                  <Copy><p className="text-sm md:text-base lg:text-lg">
                     With us, you tap into a vibrant mix of functional creativity, innovation, and business-centric goals.
                     We pack a punch with tailored website solutions that resonate with top brands&apos; objectives.
                     With Our close-knit team, you receive personalized attention and effortless integration with your team&apos;s goals.
-                  </p>
+                  </p></Copy>
                   <div className="mt-4 md:mt-0">
                   <HoverButton
               
