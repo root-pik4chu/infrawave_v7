@@ -1,6 +1,6 @@
 "use Client"
 import { useGSAP } from "@gsap/react";
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import projects from "@/data/projectData"
@@ -8,10 +8,47 @@ import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Mobile Card Component
+const MobileCard = ({ item, index }) => (
+  <div
+    style={{ backgroundColor: item.color }}
+    className="w-full h-[60vh] flex flex-col rounded-2xl shadow-2xl bg-white/60 backdrop-blur-lg border border-white/30 p-6"
+  >
+    <div className="w-full h-[60%] rounded-xl overflow-hidden mb-4">
+      <Image
+        width={500}
+        height={500}
+        className="w-full h-full object-cover"
+        src="/img.jpg"
+        alt=""
+      />
+    </div>
+    <div className="w-full h-[40%] pt-2">
+      <h2 className="lowercase font-bold text-xl mb-2 relative">
+        {item.name}
+        <span className="block w-8 h-1 bg-yellow-300 rounded-full mt-1"></span>
+      </h2>
+      <p className="text-justify text-gray-700">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis maxime officia consectetur asperiores harum repellendus nam ut libero repellat.</p>
+    </div>
+  </div>
+);
+
 const FiveProjectSlider = () => {
   const containerRef = useRef(null);
   const sliderRef = useRef(null);
   const projectsRef = useRef([]);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   // Add projects to refs array
   const addProjectRef = (el) => {
@@ -21,16 +58,17 @@ const FiveProjectSlider = () => {
   };
 
   useGSAP(() => {
+    if (window.innerWidth < 768) return; // ⛔ Skip on mobile
+  
     const projects = projectsRef.current;
   
-    // STEP 1: Set all cards to the center, randomly rotated and slightly scattered
     gsap.set(projects, {
       xPercent: -50,
       yPercent: -50,
-      x: window.innerWidth / 4 ,
+      x: window.innerWidth / 4,
       y: window.innerHeight / 4,
       rotation: () => gsap.utils.random(-40, 40),
-      scale: 0.8, // a bit smaller initially
+      scale: 0.8,
       opacity: 1,
     });
   
@@ -45,7 +83,6 @@ const FiveProjectSlider = () => {
       },
     });
   
-    // STEP 2: Animate cards into their correct spots
     tl.to(projects, {
       xPercent: 0,
       yPercent: 0,
@@ -53,19 +90,32 @@ const FiveProjectSlider = () => {
       y: 0,
       rotation: 0,
       scale: 1,
-      stagger: 0.1, // they move one by one a bit
+      stagger: 0.1,
       ease: "power2.out",
       duration: 1.5,
     });
   
-    // STEP 3: Move the whole slider horizontally
     tl.to(sliderRef.current, {
       x: () => -(sliderRef.current.scrollWidth - window.innerWidth),
       ease: "none",
       duration: 2,
     });
   }, []);
-  
+
+  if (isMobile) {
+    return (
+      <div className="w-full min-h-screen bg-zinc-50 py-8">
+        <div className="w-full px-4">
+          <h1 className="text-[20vw] mb-8">projects</h1>
+          <div className="space-y-8">
+            {projects.map((item, index) => (
+              <MobileCard key={`mobile-project-${index}`} item={item} index={index} />
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <>
@@ -88,7 +138,7 @@ const FiveProjectSlider = () => {
         >
            <div className="w-full h-[25vh] flex items-end justify-start  px-[1vw]  "> <h1 className="md:text-[10vw] text-[20vw]" >projects</h1></div>
           {/* Row of projects that moves horizontally */}
-          <div ref={sliderRef} className="flex gap-8 h-full p-8">
+          <div ref={sliderRef} className="flex  gap-8 h-full p-8">
             {projects.map((item, index) => {
               return (
                 <div
