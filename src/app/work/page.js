@@ -128,7 +128,7 @@ export default function page() {
                     <div className="col-span-1 uppercase flex flex-col justify-start items-start lg:items-end">
                       <Copy><p>tech stack</p></Copy>
                       {project.deliverables.map((item, i) => (
-                        <Copy><h4 key={i}>{item}</h4></Copy>
+                        <Copy><h4 key={item.id}>{item}</h4></Copy>
                       ))}
                     </div>
                   </div>
