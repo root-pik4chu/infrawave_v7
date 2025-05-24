@@ -44,8 +44,8 @@ export default function About() {
 
             <div className="space-y-2 md:space-y-0">
               <p className="text-sm md:text-base lg:text-lg">
-                We're a tight-knit and agile team ready to tackle projects of any
-                size, even for the biggest brands out there. We're skilled at
+                We&apos;re a tight-knit and agile team ready to tackle projects of any
+                size, even for the biggest brands out there. We&apos;re skilled at
                 creating websites that will make your audience choose your
                 business over your competitors.
               </p>
@@ -88,8 +88,8 @@ export default function About() {
                 <div className="w-full md:w-[60%] h-full text-justify flex flex-col justify-between gap-6 md:gap-0">
                   <p className="text-sm md:text-base lg:text-lg">
                     With us, you tap into a vibrant mix of functional creativity, innovation, and business-centric goals.
-                    We pack a punch with tailored website solutions that resonate with top brands' objectives.
-                    With Our close-knit team, you receive personalized attention and effortless integration with your team's goals.
+                    We pack a punch with tailored website solutions that resonate with top brands&apos; objectives.
+                    With Our close-knit team, you receive personalized attention and effortless integration with your team&apos;s goals.
                   </p>
                   <div className="mt-4 md:mt-0">
                   <HoverButton
