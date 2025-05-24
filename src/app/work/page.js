@@ -2,6 +2,8 @@
 
 import HoverButton from "@/commonComponent/button/button";
 import Copy from "@/commonComponent/textEffect/Copy";
+import Link from "next/link";
+
 import React from "react";
 
 export default function page() {
@@ -158,10 +160,10 @@ export default function page() {
                           <h4>{project.liveSite}</h4>
                         </Copy>
                       </div>
-                      <div>
-                        <Copy>
-                          <h4>view project</h4>
-                        </Copy>
+                      <div className="">
+                        
+                          <Link href={project.liveSite}><h4 className="bg-zinc-950  w-[fit-content] p-[0.3vw] rounded-md" style={{color:"#fff"}}>view project</h4></Link>
+                        
                       </div>
                     </div>
 
