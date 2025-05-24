@@ -91,7 +91,7 @@ export default function Page() {
                     solutions
                   </h1></Copy>
                   <Copy><h4 className="md:w-full w-[80%]">we create world class digital products material that communicate clearly</h4></Copy>
-                 </div>fs c
+                 </div>
                  <div className="md:w-[70%] w-[90%] h-[10%]">
                   
                  <HoverButton
