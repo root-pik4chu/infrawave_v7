@@ -35,7 +35,7 @@ export default function Page ()  {
 
   return (
     <div
-      className={`Navbar fixed top-0 transition-transform duration-500 ease-in-out z-[99] w-full h-[10vh]  bg-zinc-50 ${
+      className={`Navbar fixed top-0 transition-transform duration-500 ease-in-out z-[99] w-full h-[10vh] bg-[#f9d0c7] ${
         visible ? "translate-y-0" : "-translate-y-full"
       }`}
     >

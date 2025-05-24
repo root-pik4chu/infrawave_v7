@@ -7,7 +7,7 @@ import Copy from "@/commonComponent/textEffect/Copy";
 
 export default function AboutSection() {
   return (
-    <div className="w-full h-[90vh] md:h-[70vh] relative  overflow-hidden ">
+    <div className="w-full h-[90vh] md:h-[70vh] relative  overflow-hidden bg-[#f9d0c7]">
       
       <div className="w-full h-[90%] relative " >
         {/* <div className="absolute top-[10vh] -left-[10vw] rounded-full z-0">
@@ -16,7 +16,7 @@ export default function AboutSection() {
       
                     </div> */}
         <div className="w-full h-full relative">
-          <h1 className="px-[1vw] z-50">About us</h1>
+          <h1 className="px-[1vw] pt-[5vh] z-50">About us</h1>
           
           <div className="w-full md:h-screen   flex justify-end md:pt-[5vw] pt-[20vw]">
           <div className="flex items-center md:justify-center justify-start md:flex-row flex-col md:gap-[5vw] gap-[20vw] w-[70%] h-[40%] ">

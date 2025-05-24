@@ -12,8 +12,7 @@ export default function HoverButton({
     width = "w-[10vw]",
     height = "h-[3vw]",
     bgColor = "bg-zinc-50",
-    textColor = "text-zinc-900",
-    onClick
+    textColor = "text-zinc-900"
   }) {
   const hoverRef = useRef(null);
   const upperTextRef = useRef(null);
@@ -57,7 +56,6 @@ export default function HoverButton({
         fontFamily: "var(--smallheading)",
         padding: padding
       }}
-      onClick={onClick}
     >
       <div className="w-[70%] h-full flex items-center justify-center relative overflow-hidden">
         <span

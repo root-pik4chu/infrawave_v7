@@ -92,8 +92,8 @@ export default function page() {
 
   return (
     <>
-      <div className="h-[30vh] w-full flex flex-col md:flex-row items-center md:items-end justify-between bg-[#FF4E27] p-[4vw] md:p-[1vw] gap-4 md:gap-0">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white">
+      <div className="h-[40vh] w-full flex flex-col md:flex-row items-center md:items-end justify-between bg-[#f9d0c7] p-[4vw] md:p-[1vw] gap-4 md:gap-0">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white md:py-0 py-[20vw]">
           projects
         </h1>
         <div className="flex flex-wrap justify-center md:justify-end gap-[2vw] md:gap-[1vw]">
@@ -114,11 +114,11 @@ export default function page() {
         </div>
       </div>
 
-      <div className="w-full min-h-screen flex flex-col items-center justify-center gap-[10vh] p-[4vw] md:p-[1vw]">
+      <div className="w-full min-h-screen flex flex-col items-center justify-center gap-[10vh] p-[4vw] md:p-[1vw] ">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="outer w-full h-auto lg:h-[60vh] flex flex-col lg:flex-row items-center justify-between relative gap-6"
+            className="outer w-full h-auto lg:h-[65vh] flex flex-col lg:flex-row items-center justify-between relative gap-6 border-b-[1px] border-zinc-950/40 md:py-[2vw] py-[10vw]"
           >
             <div className="imageWrapper w-full lg:w-1/2 h-[40vh] lg:h-full object-cover">
               <div className="img w-full h-full overflow-hidden rounded-xl">

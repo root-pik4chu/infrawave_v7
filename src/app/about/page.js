@@ -21,7 +21,7 @@ const aboutData = [
 
 export default function About() {
   return <div>
-    <div className="w-full min-h-screen bg-zinc-50 px-4 md:px-[2vw] py-8 md:py-[12vh]">
+    <div className="w-full min-h-screen bg-[#f9d0c7] px-4 md:px-[2vw] py-8 md:py-[12vh]">
       <div className="w-full h-full relative">
         <div className="w-full h-[30vh] md:h-[40vh] relative bg-amber-300 overflow-hidden rounded-lg md:rounded-none">
           <video 

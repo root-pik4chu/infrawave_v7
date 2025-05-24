@@ -51,7 +51,7 @@ export default function RootLayout({ children }) {
           style={{
             position: "fixed",
             width: "100%",
-            height: "8vw",
+            height: "5vw",
             borderRadius: "12px",
             bottom: 0,
             zIndex: 9999999,

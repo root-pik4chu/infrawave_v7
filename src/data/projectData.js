@@ -33,7 +33,8 @@ const projects = [
    },
    {
     //  color: "#8B5CF6", // Purple-400
-    color:"#dadada",
+    color:"#fff",
+
     // color:"#FF4E27",
 
      name: "Immersive VR Experiences",
@@ -42,7 +43,7 @@ const projects = [
    },
    {
     //  color: "#F59E0B", // Yellow-500
-    color:"#dadada",
+    color:"#fff",
 
      name: "Cloud-Based Solutions",
      description: "Implement cloud-native applications using AWS, Google Cloud, and Azure for scalable, cost-efficient solutions.",
@@ -50,7 +51,7 @@ const projects = [
    },
    {
     //  color: "#22D3EE", // Sky Blue-400
-    color:"#dadada",
+    color:"#fff",
 
      name: "Mobile Health Apps",
      description: "Create mobile health applications that help users track fitness, wellness, and mental health.",
@@ -58,7 +59,7 @@ const projects = [
    },
    {
     //  color: "#D97706", // Amber-600
-    color:"#dadada",
+    color:"#fff",
 
      name: "Smart City Solutions",
      description: "Develop technologies to create intelligent infrastructure, improve urban living, and optimize city services.",
@@ -66,7 +67,7 @@ const projects = [
    },
    {
     //  color: "#F43F5E", // Rose-600
-    color:"#dadada",
+    color:"#fff",
 
      name: "Digital Marketing Automation",
      description: "Build marketing automation platforms for personalized campaigns, analytics, and lead generation.",

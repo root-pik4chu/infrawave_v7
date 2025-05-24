@@ -52,7 +52,7 @@ export default function FlipCardsGrid() {
   ];
 
   return (
-    <div className="w-full min-h-screen px-4 md:px-6 lg:px-8 mx-auto flex justify-center flex-col relative overflow-hidden py-8 md:py-12">
+    <div className="w-full h-[120vh] px-4 md:px-6 lg:px-8 mx-auto flex justify-center flex-col relative overflow-hidden py-8 md:py-12 ">
       {/* <div className="absolute top-[30vh] -right-[10vw] rounded-full z-0 opacity-50 md:opacity-75 lg:opacity-100">
         <Image
           src="/Rectangle98.svg"
@@ -78,12 +78,12 @@ export default function FlipCardsGrid() {
               } group-hover:rotate-y-180 lg:group-hover:rotate-y-180`}
             >
               {/* Front */}
-              <Card className="absolute w-full h-full backface-hidden p-4 sm:p-5 md:p-6 bg-white/60 backdrop-blur-lg border border-white/30 rounded-xl md:rounded-2xl shadow-xl md:shadow-2xl flex flex-col justify-center">
+              <Card className="absolute w-full h-full backface-hidden p-4 sm:p-5 md:p-6 bg-[#f9d0c7] backdrop-blur-lg border border-white/30 rounded-xl md:rounded-2xl shadow-xl md:shadow-2xl flex flex-col justify-center">
                 <h4 className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium leading-tight">{card.question}</h4>
               </Card>
 
               {/* Back */}
-              <Card className="absolute w-full h-full backface-hidden p-4 sm:p-5 md:p-6 rotate-y-180 bg-white/60 backdrop-blur-lg border border-white/30 rounded-xl md:rounded-2xl shadow-xl md:shadow-2xl flex flex-col justify-center">
+              <Card className="absolute w-full h-full backface-hidden p-4 sm:p-5 md:p-6 rotate-y-180 bg-[#f9d0c7] backdrop-blur-lg border border-white/30 rounded-xl md:rounded-2xl shadow-xl md:shadow-2xl flex flex-col justify-center">
                 <p className="text-sm sm:text-base md:text-lg leading-relaxed">{card.answer}</p>
               </Card>
             </div>

@@ -69,7 +69,7 @@ export default function Page() {
   return (
     <>
       <div>
-        <div className="w-[100%] md:h-[240vh] h-[160vh] text-[var(--text-color)]">
+        <div className="w-[100%] md:h-[240vh] h-[160vh] text-[var(--text-color)] ">
           {/* <Lines /> --------------------------------------
         <div className=" top-0 left-0 w-full h-full z-[1] pointer-events-none px-[1vw] absolute ">
         <div className="flex w-full h-full justify-between ">
@@ -83,7 +83,7 @@ export default function Page() {
           {/* -------------------------------------------- */}
           <div className="w-full h-full overflow-hidden">
             {/* Top section */}
-            <div className="w-full h-[100vh] flex relative md:flex-row flex-col-reverse">
+            <div className="w-full h-[100vh] bg-[#f9d0c7] flex relative md:flex-row flex-col-reverse">
               <div className="md:w-[50%] w-full md:h-full h-[40%]  ">
                <div className="w-full h-full relative flex flex-col items-center justify-center">
                  <div className="md:w-[70%] w-[90%] md:h-[30%] h-[50%] flex flex-col items-start justify-start">
