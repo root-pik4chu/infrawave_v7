@@ -5,9 +5,18 @@ import Navbar from "@/components/Navbar/page";
 import { useLenisScroll } from "@/hooks/useLenisScroll";
 import Footer from "@/components/Footer/page";
 import CustomCursor from "@/commonComponent/cursor/CustomCursor";
+import { useEffect } from "react";
 
 export default function RootLayout({ children }) {
   useLenisScroll();
+
+  useEffect(()=>{
+    setTimeout( () => {
+          
+          document.body.style.cursor = 'default'
+          window.scrollTo(0,0);
+        }, 2000)
+},[])
 
   const blurLayers = [
     {

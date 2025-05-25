@@ -1,9 +1,6 @@
 'use client';
 
-import Image from "next/image";
 
-
-import Link from "next/link";
 import Landing from "@/components/landing/page";
 import Preloader from "@/components/Preloader";
 import {AnimatePresence} from "framer-motion";
@@ -21,8 +18,6 @@ export default function Home() {
   useEffect(()=>{
       setTimeout( () => {
             setIsLoading(false);
-            document.body.style.cursor = 'default'
-            window.scrollTo(0,0);
           }, 2000)
   },[])
   return (

@@ -1,8 +1,8 @@
-;
+'use client';
 import HoverButton from "@/commonComponent/button/button";
 import Copy from "@/commonComponent/textEffect/Copy";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 
 const aboutData = [
   {
@@ -20,6 +20,7 @@ const aboutData = [
 ];
 
 export default function About() {
+
   return <div>
     <div className="w-full min-h-screen bg-[#f9d0c7] px-4 md:px-[2vw] py-8 md:py-[12vh]">
       <div className="w-full h-full relative">
