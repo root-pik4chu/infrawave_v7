@@ -2,6 +2,8 @@
 
 import HoverButton from "@/commonComponent/button/button";
 import Copy from "@/commonComponent/textEffect/Copy";
+import { AnimatedTestimonials as Testimonials } from "@/components/Testimonials/page";
+import  testimonialsData  from "@/data/testimonials";
 import Link from "next/link";
 
 import React from "react";
@@ -114,7 +116,7 @@ export default function page() {
         </div>
       </div>
 
-      <div className="w-full min-h-screen flex flex-col items-center justify-center gap-[10vh] p-[4vw] md:p-[1vw] ">
+      <div className="w-full h-auto flex flex-col items-center justify-center gap-[10vh] p-[4vw] md:p-[1vw] ">
         {projects.map((project, index) => (
           <div
             key={index}
@@ -206,8 +208,8 @@ export default function page() {
           </div>
         ))}
       </div>
-
-      <div className="w-full h-[20vh]"></div>
+      {/* <Testimonials testimonials={testimonialsData} />   */}
+      {/* <div className="w-full h-[20vh]"></div> */}
       <style jsx>{`
         p {
           font-size: 1vw;
@@ -247,6 +249,8 @@ export default function page() {
           }
         }
       `}</style>
+
+
     </>
   );
 }

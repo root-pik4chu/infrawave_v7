@@ -34,7 +34,7 @@ export default function Page() {
   return (
     <div className="w-full h-[380vh] relative">
       <div className="w-full md:h-[99%] h-[80%] flex flex-col items-start px-[2vw] text-[var(--text-color)]">
-      <div className="w-full md:h-[20vh] h-[50vh]  flex items-center">
+      <div className="w-full md:h-[20vh] h-[50vh] pb-[5vw] md:pb-0  flex items-center">
         <Copy><h1>Service Section</h1></Copy>
       </div>
       <div className="w-full h-full relative">

@@ -105,7 +105,7 @@ const FiveProjectSlider = () => {
 
   if (isMobile) {
     return (
-      <div className="w-full min-h-screen bg-zinc-50 py-8">
+      <div className="w-full min-h-screen pb-[25vw] md:pb-0 bg-zinc-50 py-8">
         <div className="w-full px-4">
           <h1 className="text-[20vw] mb-8">projects</h1>
           <div className="space-y-8">

@@ -14,6 +14,8 @@ import AboutSection from "@/components/AboutSectionHomePage/page";
 import WhyUsPage from "@/components/WhyUs/page";
 import FAQ from "@/components/FAQ/page";
 import ServiceSection from "@/components/ServiceSection/page";
+import { AnimatedTestimonials as Testimonials } from "@/components/Testimonials/page";
+import  testimonialsData  from "@/data/testimonials";
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(()=>{
@@ -53,7 +55,11 @@ export default function Home() {
       }}
     ></div>
     <FAQ />      
-    
+
+   <Testimonials testimonials={testimonialsData} />
+
+
+      
   </div>
   
   );

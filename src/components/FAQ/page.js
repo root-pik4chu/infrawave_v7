@@ -52,7 +52,7 @@ export default function FlipCardsGrid() {
   ];
 
   return (
-    <div className="w-full h-[120vh] px-4 md:px-6 lg:px-8 mx-auto flex justify-center flex-col relative overflow-hidden py-8 md:py-12 ">
+    <div className="w-full md:h-[120vh] h-auto px-4 md:px-6 lg:px-8 mx-auto flex justify-center flex-col relative overflow-hidden py-[20vw] md:py-12 ">
       {/* <div className="absolute top-[30vh] -right-[10vw] rounded-full z-0 opacity-50 md:opacity-75 lg:opacity-100">
         <Image
           src="/Rectangle98.svg"
