@@ -57,7 +57,7 @@ export default function ContactPage() {
                 Got an Project?
               </h2>
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-400 leading-tight">
-                Let's talk!
+                Lets talk!
               </h2>
             </div>
 
@@ -73,7 +73,7 @@ export default function ContactPage() {
                 <div className="w-5 h-5 bg-gray-900 rounded flex items-center justify-center">
                   <Check className="w-3 h-3 text-white" />
                 </div>
-                <span className="text-gray-700 text-lg">We'll respond in 24 hours - fast & focused.</span>
+                <span className="text-gray-700 text-lg">Well respond in 24 hours - fast & focused.</span>
               </div>
               
               <div className="flex items-center space-x-3">

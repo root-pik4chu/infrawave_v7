@@ -6,7 +6,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import projects from "./projectData";
 
-export default function page() {
+export default function WorkPage() {
   const [activeField, setActiveField] = useState("web Development");
 
   const handleButtonClick = (field) => {
