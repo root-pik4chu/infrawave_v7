@@ -12,7 +12,9 @@ import WhyUsPage from "@/components/WhyUs/page";
 import FAQ from "@/components/FAQ/page";
 import ServiceSection from "@/components/ServiceSection/page";
 import { AnimatedTestimonials as Testimonials } from "@/components/Testimonials/page";
+
 import  testimonialsData  from "@/data/testimonials";
+import ScrollingText from "@/components/ScrollingText/page";
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(()=>{
@@ -28,7 +30,7 @@ export default function Home() {
     <Landing />
     
     <SliderProject />
-
+    <ScrollingText />
     <ServiceSection />
     {/* <div className="w-full h-[80vh] bg-red-500"></div> */}
     <div className="w-full h-[50vh] md:h-[50vh]  flex flex-col justify-end items-center pb-[5vh]">
@@ -54,7 +56,7 @@ export default function Home() {
    <Testimonials testimonials={testimonialsData} />
 
 
-      
+    
   </div>
   
   );

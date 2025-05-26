@@ -12,7 +12,8 @@ export default function HoverButton({
     width = "w-[10vw]",
     height = "h-[3vw]",
     bgColor = "bg-zinc-50",
-    textColor = "text-zinc-900"
+    textColor = "text-zinc-900",
+    onClick
   }) {
   const hoverRef = useRef(null);
   const upperTextRef = useRef(null);
@@ -49,13 +50,14 @@ export default function HoverButton({
   }, []);
 
   return (
-    <button
+    <div
       ref={hoverRef}
-      className={`${width} ${height} ${bgColor} flex items-center justify-center relative overflow-hidden ${textColor} cursor-pointer rounded`}
+      className={`${width} ${height} ${bgColor} flex items-center justify-center relative overflow-hidden ${textColor} cursor-pointer rounded border border-zinc-950/30`}
       style={{
         fontFamily: "var(--smallheading)",
         padding: padding
       }}
+      onClick={onClick}
     >
       <div className="w-[70%] h-full flex items-center justify-center relative overflow-hidden">
         <span
@@ -73,6 +75,6 @@ export default function HoverButton({
           <h6 className={`${textSize} ${textColor}`}>{text}</h6>
         </span>
       </div>
-    </button>
+    </div>
   );
 }

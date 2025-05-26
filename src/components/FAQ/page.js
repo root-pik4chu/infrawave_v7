@@ -52,7 +52,7 @@ export default function FlipCardsGrid() {
   ];
 
   return (
-    <div className="w-full md:h-[120vh] h-auto px-4 md:px-6 lg:px-8 mx-auto flex justify-center flex-col relative overflow-hidden py-[20vw] md:py-12 ">
+    <div className="w-full md:h-[120vh] h-auto px-4 md:px-6 lg:px-8 mx-auto flex justify-center flex-col relative overflow-hidden py-[20vw] md:py-12 bg-zinc-950 text-zinc-300">
       {/* <div className="absolute top-[30vh] -right-[10vw] rounded-full z-0 opacity-50 md:opacity-75 lg:opacity-100">
         <Image
           src="/Rectangle98.svg"
@@ -65,7 +65,7 @@ export default function FlipCardsGrid() {
 
       <Copy><h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 lg:w-[70%] w-full">FAQ</h1></Copy>
 
-      <div className="w-full lg:w-[75%] lg:left-[12%] relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 z-10">
+      <div className="w-full lg:w-[75%] lg:left-[12%] relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 z-10">
         {cardData.map((card, index) => (
           <div
             key={index}
@@ -78,12 +78,12 @@ export default function FlipCardsGrid() {
               } group-hover:rotate-y-180 lg:group-hover:rotate-y-180`}
             >
               {/* Front */}
-              <Card className="absolute w-full h-full backface-hidden p-4 sm:p-5 md:p-6 bg-[#f9d0c7] backdrop-blur-lg border border-white/30 rounded-xl md:rounded-2xl shadow-xl md:shadow-2xl flex flex-col justify-center">
+              <Card className="absolute w-full h-full backface-hidden p-4 sm:p-5 md:p-6  backdrop-blur-lg border border-white/30 rounded-xl md:rounded-2xl shadow-xl md:shadow-2xl flex flex-col justify-center ">
                 <h4 className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium leading-tight">{card.question}</h4>
               </Card>
 
               {/* Back */}
-              <Card className="absolute w-full h-full backface-hidden p-4 sm:p-5 md:p-6 rotate-y-180 bg-[#f9d0c7] backdrop-blur-lg border border-white/30 rounded-xl md:rounded-2xl shadow-xl md:shadow-2xl flex flex-col justify-center">
+              <Card className="absolute w-full h-full backface-hidden p-4 sm:p-5 md:p-6 rotate-y-180  backdrop-blur-lg border border-white/30 rounded-xl md:rounded-2xl shadow-xl md:shadow-2xl flex flex-col justify-center">
                 <p className="text-sm sm:text-base md:text-lg leading-relaxed">{card.answer}</p>
               </Card>
             </div>

@@ -34,10 +34,10 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
 
   return (
     <>
-    <div className="w-full h-10vh]  flex justify-start items-end px-[1vw]">
+    <div className="testimonials w-full h-[20vh]   flex justify-start items-end px-[1vw]">
       <h1>Testimonials</h1>
     </div>
-    <div className="mx-auto max-w-sm md:h-[70vh] px-4 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12 overflow-hidden">
+    <div className="mx-auto max-w-sm md:h-[80vh] px-4 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12 overflow-hidden">
       <div className="relative grid grid-cols-1 gap-20 md:grid-cols-2">
         <div>
           <div className="relative h-[50vh] w-full">
@@ -95,13 +95,13 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
             exit={{ y: -20, opacity: 0 }}
             transition={{ duration: 0.2, ease: "easeInOut" }}
           >
-            <h3 className="text-2xl font-bold text-black dark:text-white">
+            <h3 className="text-2xl font-bold ">
               {testimonials[active].name}
             </h3>
-            <p className="text-sm text-gray-500 dark:text-neutral-500">
+            <p className="text-sm text-gray-500 ">
               {testimonials[active].designation}
             </p>
-            <motion.p className="mt-8 text-lg text-gray-500 dark:text-neutral-300">
+            <motion.p className="mt-8 text-lg  ">
               {testimonials[active].quote.split(" ").map((word, index) => (
                 <motion.span
                   key={index}

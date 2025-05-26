@@ -83,12 +83,12 @@ const SwipperData = () => {
           >
             {cardData.map((card, index) => (
               <SwiperSlide key={index}>
-                <div className="rounded-2xl  bg-[#f9d0c7] backdrop-blur-lg border border-zinc-300  p-6 h-full flex flex-col justify-between ">
-                  <h2 className="lowercase font-extrabold text-xl mb-2 relative text-gray-900">
+                <div className="rounded-2xl  backdrop-blur-lg border   p-6 h-full flex flex-col justify-between ">
+                  <h2 className="lowercase font-extrabold text-xl mb-2 relative text-zinc-500">
                     {card.title}
                     <span className="block w-8 h-1 bg-zinc-950 rounded-full mt-1"></span>
                   </h2>
-                  <p className="text-base text-gray-700 leading-relaxed line-clamp-3">
+                  <p className="text-base leading-relaxed line-clamp-3 text-zinc-500">
                     {card.description}
                   </p>
                 </div>

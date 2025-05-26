@@ -7,7 +7,7 @@ import Copy from "@/commonComponent/textEffect/Copy";
 
 export default function AboutSection() {
   return (
-    <div className="w-full h-[90vh] md:h-[70vh] relative  overflow-hidden bg-[#f9d0c7]">
+    <div className="w-full h-[90vh] md:h-[70vh] relative  overflow-hidden bg-black text-zinc-300">
       
       <div className="w-full h-[90%] relative " >
         {/* <div className="absolute top-[10vh] -left-[10vw] rounded-full z-0">

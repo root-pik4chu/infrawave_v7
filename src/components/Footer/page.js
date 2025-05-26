@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div>
       <div
-        className="w-full h-[85vh] bg-[#f9d0c7]"
+        className="w-full h-[85vh] bg-zinc-950 text-zinc-300"
         style={{
           clipPath: "polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%)",
         }}

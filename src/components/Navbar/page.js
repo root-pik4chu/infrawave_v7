@@ -35,9 +35,9 @@ export default function Page ()  {
 
   return (
     <div
-      className={`Navbar fixed top-0 transition-transform duration-500 ease-in-out z-[99] w-full h-[10vh] bg-[#f9d0c7] ${
+      className={`Navbar fixed top-0 transition-transform duration-500 ease-in-out z-[99] w-full h-[10vh] text-zinc-950/80  bg-zinc-50/80 ${
         visible ? "translate-y-0" : "-translate-y-full"
-      }`}
+      }`} 
     >
       <div className="w-full h-full grid grid-cols-5 items-center backdrop-blur-sm bg-zinc/90 border-b border-white/10 shadow-[0_2px_10px_rgba(255,255,255,0.05)]">
         <div className="flex justify-start col-span-1">
@@ -51,7 +51,7 @@ export default function Page ()  {
                 href={item.path}
                 className="text-[0.8vw] font-medium hover:cursor-pointer uppercase"
               >
-                <p>{item.name}</p>
+                <p className="mix-blend-difference">{item.name}</p>
               </Link>
             </div>
           ))}
@@ -60,7 +60,7 @@ export default function Page ()  {
         <div className="flex justify-end md:hidden col-span-4 px-[5vw]">
           <button onClick={() => setMenuOpen(!menuOpen)}>
            <div
-  className="relative w-6 h-5 flex flex-col justify-between items-center cursor-pointer"
+  className="relative w-6 h-5 flex flex-col justify-between items-center cursor-pointer "
 >
   <span
     className={`block h-[2px] w-full bg-zinc-950 transition-transform duration-300 ease-in-out ${
@@ -89,7 +89,7 @@ export default function Page ()  {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: "-100%", opacity: 0 }}
             transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.6 }}
-            className="fixed top-[10vh] left-0 w-full h-[50vh] bg-zinc-50 text-white flex flex-col items-start justify-center z-50 gap-[2vw] "
+            className="fixed top-[10vh] left-0 w-full h-[50vh] bg-zinc-50 text-zinc-950 flex flex-col items-start justify-center z-50 gap-[2vw] "
           >
             {navItems.map((item, index) => (
               <div key={item.name} className="overflow-hidden">
