@@ -35,12 +35,12 @@ A modern, responsive website built with Next.js 13+ showcasing Infrawave Solutio
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/infrawave-solutions.git
+[git clone https://github.com/root-pik4chu/infrawave_v7.git
 ```
 
 2. Install dependencies:
 ```bash
-cd infrawave-solutions
+cd v7
 npm install
 ```
 
@@ -124,7 +124,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👥 Team
 
-- [Sahil Saundale] - Lead Developer
+- [Sahil Saundale] - Developer
 - [Sahil Saundale] - UI/UX Designer
 
 
@@ -138,9 +138,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Contact
 
 For any queries or support, please reach out to:
-- Email: your.email@example.com
+
 - Website: https://infrawavesolutions.com
-- LinkedIn: [Your LinkedIn Profile]
+- LinkedIn: [(https://www.linkedin.com/in/sahil-saundale/)]
 
 ---
 
