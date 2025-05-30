@@ -3,87 +3,120 @@
 import HoverButton from "@/commonComponent/button/button";
 import Copy from "@/commonComponent/textEffect/Copy";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import projects from "./projectData";
 
 export default function WorkPage() {
-  const [activeField, setActiveField] = useState("web Development");
+  const [activeDomain, setActiveDomain] = useState("Web Development");
+  const [activeSubDomain, setActiveSubDomain] = useState(null);
+  const [openDropdown, setOpenDropdown] = useState(null);
+  const dropdownRefs = useRef({});
 
-  const handleButtonClick = (field) => {
-    console.log("Button clicked:", field);
-    setActiveField(field);
+  const domains = Object.keys(projects);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      const clickedOutside = Object.values(dropdownRefs.current).every(
+        ref => ref && !ref.contains(event.target)
+      );
+      if (clickedOutside) {
+        setOpenDropdown(null);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  const handleDomainClick = (domain) => {
+    if (openDropdown === domain) {
+      setOpenDropdown(null);
+    } else {
+      setOpenDropdown(domain);
+    }
+    setActiveDomain(domain);
+    setActiveSubDomain(null);
   };
 
-  const getBackgroundColor = (field) => {
-    switch(field) {
-      case "web Development":
+  const handleSubDomainSelect = (domain, subDomain) => {
+    setActiveDomain(domain);
+    setActiveSubDomain(subDomain);
+    setOpenDropdown(null);
+  };
+
+  const getBackgroundColor = (domain) => {
+    switch(domain) {
+      case "Web Development":
         return "bg-[#00bcd4]"; // Cyan
-      case "AiMl":
+      case "AI/ML":
         return "bg-[#8e44ad]"; // Purple
-      case "uiux":
+      case "UI/UX":
         return "bg-[#ff69b4]"; // Pink
-      case "BlockChain":
+      case "Blockchain":
         return "bg-[#f39c12]"; // Orange
       default:
         return "bg-[#f9d0c7]"; // Default color
     }
   };
 
-  
+  const getFilteredProjects = () => {
+    if (!activeDomain) return [];
+    if (!activeSubDomain) {
+      return Object.values(projects[activeDomain]).flat();
+    }
+    return projects[activeDomain][activeSubDomain];
+  };
 
-  const filteredProjects = projects.filter(project => project.field === activeField);
+  const filteredProjects = getFilteredProjects();
 
   return (
     <>
-      <div className={`h-[30vh] md:h-[40vh] w-full flex flex-col md:flex-row items-center md:items-end md:justify-between justify-end  ${getBackgroundColor(activeField)} p-[4vw] md:p-[1vw] gap-4 md:gap-0 transition-colors duration-300`}>
-        <h1 className="text-6xl md:text-6xl lg:text-7xl font-bold text-white md:py-0 ">
-          {activeField}
+      <div className={`h-[30vh] md:h-[40vh] w-full flex flex-col md:flex-row items-center md:items-end md:justify-between justify-end ${getBackgroundColor(activeDomain)} p-[4vw] md:p-[1vw] gap-4 md:gap-0 transition-colors duration-300`}>
+        <h1 className="text-6xl md:text-6xl lg:text-7xl font-bold text-white md:py-0">
+          {activeDomain}
         </h1>
         <div className="flex flex-wrap justify-center md:justify-end gap-[2vw] md:gap-[1vw]">
-          <HoverButton
-            text="Web Development"
-            textSize="text-[3vw] md:text-[1vw] lg:text-[.8vw]"
-            padding="1vw md:.5vw"
-            width="w-[40vw] md:w-[15vw] lg:w-[10vw]"
-            height="h-[8vw] md:h-[4vw] lg:h-[2vw]"
-            bgColor={activeField === "web Development" ? "bg-[#00bcd4]" : "bg-zinc-50"}
-            textColor={activeField === "web Development" ? "text-white" : "text-zinc-950"}
-            onClick={() => handleButtonClick("web Development")}
-          />
-          <HoverButton
-            text="AI/ML"
-            textSize="text-[3vw] md:text-[1vw] lg:text-[.8vw]"
-            padding="1vw md:.5vw"
-            width="w-[40vw] md:w-[15vw] lg:w-[10vw]"
-            height="h-[8vw] md:h-[4vw] lg:h-[2vw]"
-            bgColor={activeField === "AiMl" ? "bg-[#8e44ad]" : "bg-zinc-50"}
-            textColor={activeField === "AiMl" ? "text-white" : "text-zinc-950"}
-            onClick={() => handleButtonClick("AiMl")}
-          />
-          <HoverButton
-            text="UI/UX"
-            textSize="text-[3vw] md:text-[1vw] lg:text-[.8vw]"
-            padding="1vw md:.5vw"
-            width="w-[40vw] md:w-[15vw] lg:w-[10vw]"
-            height="h-[8vw] md:h-[4vw] lg:h-[2vw]"
-            bgColor={activeField === "uiux" ? "bg-[#ff69b4]" : "bg-zinc-50"}
-            textColor={activeField === "uiux" ? "text-white" : "text-zinc-950"}
-            onClick={() => handleButtonClick("uiux")}
-          />
-          <HoverButton
-            text="Blockchain"
-            textSize="text-[3vw] md:text-[1vw] lg:text-[.8vw]"
-            padding="1vw md:.5vw"
-            width="w-[40vw] md:w-[15vw] lg:w-[10vw]"
-            height="h-[8vw] md:h-[4vw] lg:h-[2vw]"
-            bgColor={activeField === "BlockChain" ? "bg-[#f39c12]" : "bg-zinc-50"}
-            textColor={activeField === "BlockChain" ? "text-white" : "text-zinc-950"}
-            onClick={() => handleButtonClick("BlockChain")}
-          />
+          {domains.map((domain) => (
+            <div key={domain} className="relative" ref={el => dropdownRefs.current[domain] = el}>
+              <div className="relative">
+                <HoverButton
+                  text={domain}
+                  textSize="text-[3vw] md:text-[1vw] lg:text-[.8vw]"
+                  padding="1vw md:.5vw"
+                  width="w-[40vw] md:w-[15vw] lg:w-[10vw]"
+                  height="h-[8vw] md:h-[4vw] lg:h-[2vw]"
+                  bgColor={activeDomain === domain ? getBackgroundColor(domain) : "bg-zinc-50"}
+                  textColor={activeDomain === domain ? "text-white" : "text-zinc-950"}
+                  onClick={() => handleDomainClick(domain)}
+                />
+                <svg 
+                  className={`absolute right-2 top-1/2 -translate-y-1/2 w-4 h-4 transition-transform ${openDropdown === domain ? 'rotate-180' : ''} ${activeDomain === domain ? 'text-white' : 'text-zinc-950'}`}
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+              {openDropdown === domain && (
+                <div className="absolute top-full right-0 mt-2 bg-white rounded-lg shadow-lg p-2 z-50 min-w-[200px]">
+                  {Object.keys(projects[domain]).map((subDomain) => (
+                    <button
+                      key={subDomain}
+                      onClick={() => handleSubDomainSelect(domain, subDomain)}
+                      className="block w-full text-left px-4 py-2 hover:bg-gray-100 rounded"
+                    >
+                      {subDomain}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </div>
 
-      <div className="w-full h-auto flex flex-col items-center justify-center gap-[10vh] p-[4vw] md:p-[1vw] ">
+      <div className="w-full h-auto flex flex-col items-center justify-center gap-[10vh] p-[4vw] md:p-[1vw]">
         {filteredProjects.map((project, index) => (
           <div
             key={index}

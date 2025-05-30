@@ -6,17 +6,19 @@ import { useLenisScroll } from "@/hooks/useLenisScroll";
 import Footer from "@/components/Footer/page";
 import CustomCursor from "@/commonComponent/cursor/CustomCursor";
 import { useEffect } from "react";
+import Template from "./template";
+import { usePathname } from "next/navigation";
 
 export default function RootLayout({ children }) {
   useLenisScroll();
+  const pathname = usePathname();
 
   useEffect(()=>{
     setTimeout( () => {
-          
-          document.body.style.cursor = 'default'
-          window.scrollTo(0,0);
-        }, 2000)
-},[])
+      document.body.style.cursor = 'default'
+      window.scrollTo(0,0);
+    }, 2000)
+  },[])
 
   const blurLayers = [
     {
@@ -55,7 +57,9 @@ export default function RootLayout({ children }) {
       <body>
         <Navbar />
         <CustomCursor />
-        {children}
+        <Template key={pathname}>
+          {children}
+        </Template>
         <div
           style={{
             position: "fixed",

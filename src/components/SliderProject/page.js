@@ -6,6 +6,8 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import projects from "@/data/projectData"
 import Image from "next/image";
 import Copy from "@/commonComponent/textEffect/Copy";
+import HoverButton from "@/commonComponent/button/button";
+import { useRouter } from "next/navigation";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -39,6 +41,7 @@ const FiveProjectSlider = () => {
   const sliderRef = useRef(null);
   const projectsRef = useRef([]);
   const [isMobile, setIsMobile] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const checkMobile = () => {
@@ -97,7 +100,7 @@ const FiveProjectSlider = () => {
     });
   
     tl.to(sliderRef.current, {
-      x: () => -(sliderRef.current.scrollWidth - window.innerWidth),
+      x: () => -(sliderRef.current.scrollWidth - window.innerWidth + 150),
       ease: "none",
       duration: 2,
     });
@@ -114,6 +117,18 @@ const FiveProjectSlider = () => {
             ))}
           </div>
         </div>
+        <div className="w-[100vw] h-[20vh] flex items-center justify-center">
+          <HoverButton
+            text="view all projects"
+            textSize="md:text-[1vw] text-[3.5vw]"
+            padding="p-[1vw]"
+            width="md:w-[13vw] w-[60%]"
+            height="md:h-[2.5vw] h-[12vw]"
+            bgColor="bg-zinc-950"
+            textColor="text-zinc-50"
+            onClick={() => router.push("/work")}
+          />
+        </div>
       </div>
     );
   }
@@ -121,7 +136,7 @@ const FiveProjectSlider = () => {
   return (
     <>
      <div
-        className="w-full h-[480vh]     text-[var(--text-color)]"
+        className="w-full h-[480vh]  text-[var(--text-color)]"
         // style={{
         //   backgroundImage:
         //     "url('https://www.lumina-design.co/static/media/i_project_bg.9a00241e79d94cfd91eb.png')",
@@ -167,7 +182,22 @@ const FiveProjectSlider = () => {
                 </div>
               );
             })}
+            <div className="w-[50vw] h-[60vh]  flex items-center justify-center">
+            <HoverButton
+                          text="view all projects"
+                          textSize="md:text-[1vw] text-[3.5vw]"
+                          padding="p-[1vw]"
+                          width="md:w-[13vw] w-[60%]"
+                          height="md:h-[2.5vw] h-[12vw]"
+                          bgColor="bg-zinc-950"
+                          textColor="text-zinc-50"
+                          onClick={() => router.push("/work")}
+                        />
+
+           
           </div>
+          </div>
+          
         </div>
       </div>
 

@@ -58,7 +58,7 @@ const SwipperData = () => {
         <div className="w-full h-[70%] ">
           <Swiper
             spaceBetween={10}
-            slidesPerView={3.2}
+            slidesPerView={3.5}
             navigation={{
               prevEl: prevRef.current,
               nextEl: nextRef.current,
@@ -75,7 +75,7 @@ const SwipperData = () => {
                 slidesPerView: 2,
               },
               1024: {
-                slidesPerView: 4.2,
+                slidesPerView: 4.5,
               },
             }}
             modules={[Navigation]}
@@ -84,11 +84,11 @@ const SwipperData = () => {
             {cardData.map((card, index) => (
               <SwiperSlide key={index}>
                 <div className="rounded-2xl  backdrop-blur-lg border   p-6 h-full flex flex-col justify-between ">
-                  <h2 className="lowercase font-extrabold text-xl mb-2 relative text-zinc-500">
+                  <h2 className="lowercase font-extrabold text-xl mb-2 relative text-zinc-800">
                     {card.title}
-                    <span className="block w-8 h-1 bg-zinc-950 rounded-full mt-1"></span>
+                    <span className="block w-8 h-1 bg-yellow-500 rounded-full mt-1"></span>
                   </h2>
-                  <p className="text-base leading-relaxed line-clamp-3 text-zinc-500">
+                  <p className="text-base leading-relaxed line-clamp-3 text-zinc-950">
                     {card.description}
                   </p>
                 </div>

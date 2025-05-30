@@ -33,22 +33,22 @@ export default function Page() {
 
   return (
     <div className="w-full h-[380vh] relative">
-      <div className="w-full md:h-[99%] h-[80%] flex flex-col items-start px-[2vw] text-[var(--text-color)]">
+      <div className="w-full md:h-[99%] h-[80%] flex flex-col items-start  text-[var(--text-color)]">
       <div className="w-full md:h-[20vh] h-[50vh] pb-[5vw] md:pb-0  flex items-center">
         <Copy><h1>Service Section</h1></Copy>
       </div>
-      <div className="w-full h-full relative">
+      <div className="w-full h-full relative px-[2vw] ">
         {services.map((item, i) => {
           const staggerOffset = i * 90;
 
           return (
             <div
               key={i}
-              className="w-full md:h-[14.5vw] h-[50vh] sticky top-[5vw] "
-              style={{ color: "#fff" }}
+              className="w-full md:h-[14.5vw] h-[50vh] sticky top-[5vw] rounded-4xl "
+              // style={{ color: "#fff" }}
             >
               <motion.div
-                className="flex flex-col relative md:h-[45vh] h-[550px] w-full md:px-[2vw] rounded-4xl shadow-2xl bg-white/60 backdrop-blur-lg border-4"
+                className="flex flex-col relative md:h-[45vh] h-[550px] w-full md:px-[2vw] shadow-2xl text-zinc-950 bg-zinc-950 backdrop-blur-lg border-4 border-zinc-700 rounded-4xl"
                 style={{
                   borderColor: item.borderColor,
                   backgroundColor: "rgba(255,255,255,0.6)",
@@ -56,7 +56,7 @@ export default function Page() {
                   zIndex: 100 - i,
                 }}
               >
-                <div className="relative flex md:flex-row flex-col justify-between w-full h-full md:p-8 p-6 text-gray-800">
+                <div className="relative flex md:flex-row flex-col justify-between w-full h-full md:p-8 p-6 ">
                   <div className="md:w-[33%] flex flex-col justify-center">
                     <Copy><h2 className="lowercase font-extrabold text-3xl md:text-5xl mb-2 relative">
                       {item.Name}

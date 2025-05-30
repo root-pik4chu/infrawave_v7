@@ -101,7 +101,7 @@ export default function ContactPage() {
                   <p className="text-gray-600">Founder & CEO</p>
                 </div>
                 
-                <button className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center hover:bg-indigo-700 transition-colors">
+                <button className="w-12 h-12 bg-zinc-900 rounded-lg flex items-center justify-center hover:bg-zinc-700 transition-colors">
                   <Calendar className="w-6 h-6 text-white" />
                 </button>
               </div>
@@ -119,7 +119,7 @@ export default function ContactPage() {
                     placeholder="Email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-zinc-500 focus:border-transparent outline-none transition-all"
                     required
                   />
                 </div>
@@ -131,7 +131,7 @@ export default function ContactPage() {
                     placeholder="Full name"
                     value={formData.fullName}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-zinc-500 focus:border-transparent outline-none transition-all"
                     required
                   />
                 </div>
@@ -143,13 +143,13 @@ export default function ContactPage() {
                     name="projectBudget"
                     value={formData.projectBudget}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all text-gray-500 bg-white"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-zinc-500 focus:border-transparent outline-none transition-all text-gray-500 bg-white"
                   >
-                    <option value="">Project budget</option>
-                    <option value="<10k">Less than $10,000</option>
-                    <option value="10k-50k">$10,000 - $50,000</option>
-                    <option value="50k-100k">$50,000 - $100,000</option>
-                    <option value=">100k">More than $100,000</option>
+                    <option className='bg-zinc-900 text-white' value="">Project budget</option>
+                    <option className='bg-zinc-900 text-white' value="<10k">Less than $10,000</option>
+                    <option className='bg-zinc-900 text-white' value="10k-50k">$10,000 - $50,000</option>
+                    <option className='bg-zinc-900 text-white' value="50k-100k">$50,000 - $100,000</option>
+                    <option className='bg-zinc-900 text-white' value=">100k">More than $100,000</option>
                   </select>
                 </div>
                 
@@ -158,13 +158,13 @@ export default function ContactPage() {
                     name="hearAbout"
                     value={formData.hearAbout}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all text-gray-500 bg-white"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-zinc-500 focus:border-transparent outline-none transition-all text-gray-500 bg-white"
                   >
-                    <option value="">How did you hear about us?</option>
-                    <option value="google">Google Search</option>
-                    <option value="referral">Referral</option>
-                    <option value="social">Social Media</option>
-                    <option value="other">Other</option>
+                    <option className='bg-zinc-900 text-white' value="">How did you hear about us?</option>
+                    <option className='bg-zinc-900 text-white' value="google">Google Search</option>
+                    <option className='bg-zinc-900 text-white' value="referral">Referral</option>
+                    <option className='bg-zinc-900 text-white' value="social">Social Media</option>
+                    <option className='bg-zinc-900 text-white' value="other">Other</option>
                   </select>
                 </div>
               </div>
@@ -176,7 +176,7 @@ export default function ContactPage() {
                   value={formData.productGoals}
                   onChange={handleInputChange}
                   rows={4}
-                  className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all resize-none"
+                  className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-zinc-900 focus:border-transparent outline-none transition-all resize-none"
                 />
               </div>
 
@@ -191,7 +191,7 @@ export default function ContactPage() {
                       onClick={() => handleServiceToggle(service)}
                       className={`px-4 py-2 rounded-lg border text-sm font-medium transition-all ${
                         formData.services.includes(service)
-                          ? 'bg-indigo-50 border-indigo-200 text-indigo-700'
+                          ? 'bg-zinc-50 border-zinc-900 text-zinc-700'
                           : 'bg-white border-gray-200 text-gray-600 hover:border-gray-300'
                       }`}
                     >
@@ -204,7 +204,7 @@ export default function ContactPage() {
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between pt-4">
                 <button
                   type="submit"
-                  className="w-full sm:w-auto bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors mb-4 sm:mb-0"
+                  className="w-full sm:w-auto bg-zinc-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-zinc-700 transition-colors mb-4 sm:mb-0"
                 >
                   Send inquiry
                 </button>
@@ -213,7 +213,7 @@ export default function ContactPage() {
                   <p className="text-gray-500 text-sm mb-1">Prefer email?</p>
                   <a 
                     href="mailto:hello@wavespaceagency"
-                    className="text-gray-900 font-medium underline hover:text-indigo-600 transition-colors"
+                    className="text-gray-900 font-medium underline hover:text-zinc-600 transition-colors"
                   >
                     hello@infrawave
                   </a>

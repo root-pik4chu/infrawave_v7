@@ -1,96 +1,252 @@
-const projects = [
-   // Web Development Projects
-   {
-     id: 1,
-     title: "E-Commerce Platform",
-     description: "A full-stack e-commerce platform built with Next.js and Node.js. Features include real-time inventory management, secure payment processing, and advanced search functionality.",
-     image: "https://images.unsplash.com/photo-1661956602116-aa6865609028?w=500&auto=format&fit=crop&q=60",
-     liveSite: "ECOMMERCE.COM",
-     industry: "E-Commerce",
-     published: "©2024",
-     field: "web Development",
-     deliverables: ["REACT", "NODE.JS", "MONGODB", "REDIS"]
-   },
-   {
-     id: 2,
-     title: "Social Media Dashboard",
-     description: "A comprehensive social media management dashboard that allows users to schedule posts, analyze engagement metrics, and manage multiple social media accounts from one platform.",
-     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&auto=format&fit=crop&q=60",
-     liveSite: "SOCIALDASH.IO",
-     industry: "Social Media",
-     published: "©2024",
-     field: "web Development",
-     deliverables: ["VUE.JS", "EXPRESS", "POSTGRESQL", "AWS"]
-   },
-   // AI/ML Projects
-   {
-     id: 3,
-     title: "AI Image Recognition",
-     description: "An advanced image recognition system using deep learning algorithms. The system can identify objects, faces, and scenes in real-time with high accuracy.",
-     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=500&auto=format&fit=crop&q=60",
-     liveSite: "AIVISION.AI",
-     industry: "Artificial Intelligence",
-     published: "©2024",
-     field: "AiMl",
-     deliverables: ["PYTHON", "TENSORFLOW", "OPENCV", "DOCKER"]
-   },
-   {
-     id: 4,
-     title: "Predictive Analytics",
-     description: "A machine learning platform that provides predictive analytics for business forecasting. Uses historical data to predict future trends and patterns.",
-     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&auto=format&fit=crop&q=60",
-     liveSite: "PREDICTML.COM",
-     industry: "Data Science",
-     published: "©2024",
-     field: "AiMl",
-     deliverables: ["PYTHON", "SCIKIT-LEARN", "PANDAS", "JUPYTER"]
-   },
-   // UI/UX Projects
-   {
-     id: 5,
-     title: "Mobile Banking App",
-     description: "A modern mobile banking application with intuitive user interface and seamless user experience. Features include biometric authentication and real-time transaction updates.",
-     image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=500&auto=format&fit=crop&q=60",
-     liveSite: "MOBILEBANK.APP",
-     industry: "Fintech",
-     published: "©2024",
-     field: "uiux",
-     deliverables: ["FIGMA", "REACT NATIVE", "UI/UX", "PROTOTYPING"]
-   },
-   {
-     id: 6,
-     title: "Fitness Tracker",
-     description: "A beautifully designed fitness tracking application that helps users monitor their workouts, nutrition, and health metrics with an engaging user interface.",
-     image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&auto=format&fit=crop&q=60",
-     liveSite: "FITTRACK.IO",
-     industry: "Health & Fitness",
-     published: "©2024",
-     field: "uiux",
-     deliverables: ["SKETCH", "SWIFT", "UI/UX", "ANIMATION"]
-   },
-   // Blockchain Projects
-   {
-     id: 7,
-     title: "NFT Marketplace",
-     description: "A decentralized NFT marketplace built on Ethereum blockchain. Features include minting, trading, and auctioning of digital assets with smart contract integration.",
-     image: "https://images.unsplash.com/photo-1639762681057-408e52192e55?w=500&auto=format&fit=crop&q=60",
-     liveSite: "NFTMARKET.IO",
-     industry: "Blockchain",
-     published: "©2024",
-     field: "BlockChain",
-     deliverables: ["SOLIDITY", "WEB3.JS", "IPFS", "ETHEREUM"]
-   },
-   {
-     id: 8,
-     title: "DeFi Platform",
-     description: "A decentralized finance platform offering lending, borrowing, and yield farming services. Built with advanced smart contracts and secure token protocols.",
-     image: "https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=500&auto=format&fit=crop&q=60",
-     liveSite: "DEFIPLATFORM.IO",
-     industry: "DeFi",
-     published: "©2024",
-     field: "BlockChain",
-     deliverables: ["SOLIDITY", "REACT", "HARDHAT", "WEB3"]
-   }
- ];
+const projects = {
+  "Web Development": {
+    "Full Stack": [
+      {
+        title: "E-commerce Platform",
+        image: "https://images.unsplash.com/photo-1744646366936-874cf4a39b96?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNnx8fGVufDB8fHx8fA%3D%3D",
+        liveSite: "https://example.com",
+        industry: "Retail",
+        published: "2024",
+        deliverables: ["React", "Node.js", "MongoDB"],
+        description: "A full-featured e-commerce platform with real-time inventory management."
+      },
+      {
+        title: "Social Media Dashboard",
+        image: "https://images.unsplash.com/photo-1747901718793-23dd4b160332?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMnx8fGVufDB8fHx8fA%3D%3D",
+        liveSite: "https://example.com",
+        industry: "Social Media",
+        published: "2024",
+        deliverables: ["Next.js", "Express", "PostgreSQL"],
+        description: "Comprehensive social media management dashboard with analytics."
+      }
+    ],
+    "Frontend": [
+      {
+        title: "Portfolio Website",
+        image: "/images/project3.jpg",
+        liveSite: "https://example.com",
+        industry: "Creative",
+        published: "2024",
+        deliverables: ["React", "GSAP", "Tailwind"],
+        description: "Interactive portfolio website with smooth animations."
+      },
+      {
+        title: "Landing Page",
+        image: "/images/project4.jpg",
+        liveSite: "https://example.com",
+        industry: "Marketing",
+        published: "2024",
+        deliverables: ["Vue.js", "SCSS", "Webpack"],
+        description: "High-converting landing page with A/B testing."
+      }
+    ],
+    "Backend": [
+      {
+        title: "API Gateway",
+        image: "/images/project5.jpg",
+        liveSite: "https://example.com",
+        industry: "Technology",
+        published: "2024",
+        deliverables: ["Node.js", "Redis", "Docker"],
+        description: "Scalable API gateway with rate limiting and caching."
+      },
+      {
+        title: "Microservices Platform",
+        image: "/images/project6.jpg",
+        liveSite: "https://example.com",
+        industry: "Enterprise",
+        published: "2024",
+        deliverables: ["Go", "Kubernetes", "gRPC"],
+        description: "Distributed microservices architecture with service discovery."
+      }
+    ]
+  },
+  "AI/ML": {
+    "Computer Vision": [
+      {
+        title: "Object Detection System",
+        image: "/images/project7.jpg",
+        liveSite: "https://example.com",
+        industry: "Security",
+        published: "2024",
+        deliverables: ["Python", "TensorFlow", "OpenCV"],
+        description: "Real-time object detection for security cameras."
+      },
+      {
+        title: "Face Recognition App",
+        image: "/images/project8.jpg",
+        liveSite: "https://example.com",
+        industry: "Biometrics",
+        published: "2024",
+        deliverables: ["PyTorch", "Dlib", "Flask"],
+        description: "Face recognition system with emotion detection."
+      }
+    ],
+    "Natural Language Processing": [
+      {
+        title: "Chatbot Platform",
+        image: "/images/project9.jpg",
+        liveSite: "https://example.com",
+        industry: "Customer Service",
+        published: "2024",
+        deliverables: ["Python", "BERT", "FastAPI"],
+        description: "AI-powered customer service chatbot."
+      },
+      {
+        title: "Text Analysis Tool",
+        image: "/images/project10.jpg",
+        liveSite: "https://example.com",
+        industry: "Analytics",
+        published: "2024",
+        deliverables: ["NLTK", "spaCy", "Django"],
+        description: "Advanced text analysis and sentiment detection."
+      }
+    ],
+    "Predictive Analytics": [
+      {
+        title: "Sales Forecasting",
+        image: "/images/project11.jpg",
+        liveSite: "https://example.com",
+        industry: "Retail",
+        published: "2024",
+        deliverables: ["Python", "Scikit-learn", "Pandas"],
+        description: "Machine learning model for sales prediction."
+      },
+      {
+        title: "Risk Assessment System",
+        image: "/images/project12.jpg",
+        liveSite: "https://example.com",
+        industry: "Finance",
+        published: "2024",
+        deliverables: ["XGBoost", "NumPy", "Flask"],
+        description: "AI-powered risk assessment for financial services."
+      }
+    ]
+  },
+  "UI/UX": {
+    "Mobile Design": [
+      {
+        title: "Fitness App UI",
+        image: "/images/project13.jpg",
+        liveSite: "https://example.com",
+        industry: "Health",
+        published: "2024",
+        deliverables: ["Figma", "Adobe XD", "Prototyping"],
+        description: "User-centered fitness tracking app design."
+      },
+      {
+        title: "Food Delivery App",
+        image: "/images/project14.jpg",
+        liveSite: "https://example.com",
+        industry: "Food",
+        published: "2024",
+        deliverables: ["Sketch", "Principle", "User Testing"],
+        description: "Intuitive food delivery app interface."
+      }
+    ],
+    "Web Design": [
+      {
+        title: "E-learning Platform",
+        image: "/images/project15.jpg",
+        liveSite: "https://example.com",
+        industry: "Education",
+        published: "2024",
+        deliverables: ["Figma", "Adobe XD", "Wireframing"],
+        description: "Engaging e-learning platform design."
+      },
+      {
+        title: "SaaS Dashboard",
+        image: "/images/project16.jpg",
+        liveSite: "https://example.com",
+        industry: "Technology",
+        published: "2024",
+        deliverables: ["Sketch", "InVision", "User Research"],
+        description: "Clean and functional SaaS dashboard design."
+      }
+    ],
+    "Brand Identity": [
+      {
+        title: "Brand Guidelines",
+        image: "/images/project17.jpg",
+        liveSite: "https://example.com",
+        industry: "Branding",
+        published: "2024",
+        deliverables: ["Illustrator", "Photoshop", "Typography"],
+        description: "Comprehensive brand identity system."
+      },
+      {
+        title: "Logo Design System",
+        image: "/images/project18.jpg",
+        liveSite: "https://example.com",
+        industry: "Branding",
+        published: "2024",
+        deliverables: ["Illustrator", "Brand Strategy", "Color Theory"],
+        description: "Versatile logo design system with variations."
+      }
+    ]
+  },
+  "Blockchain": {
+    "DeFi": [
+      {
+        title: "DEX Platform",
+        image: "/images/project19.jpg",
+        liveSite: "https://example.com",
+        industry: "Finance",
+        published: "2024",
+        deliverables: ["Solidity", "Web3.js", "React"],
+        description: "Decentralized exchange platform."
+      },
+      {
+        title: "Yield Farming Protocol",
+        image: "/images/project20.jpg",
+        liveSite: "https://example.com",
+        industry: "Finance",
+        published: "2024",
+        deliverables: ["Solidity", "Hardhat", "Ethers.js"],
+        description: "Automated yield farming protocol."
+      }
+    ],
+    "NFT": [
+      {
+        title: "NFT Marketplace",
+        image: "/images/project21.jpg",
+        liveSite: "https://example.com",
+        industry: "Art",
+        published: "2024",
+        deliverables: ["Solidity", "IPFS", "Next.js"],
+        description: "NFT marketplace for digital art."
+      },
+      {
+        title: "NFT Game Assets",
+        image: "/images/project22.jpg",
+        liveSite: "https://example.com",
+        industry: "Gaming",
+        published: "2024",
+        deliverables: ["Solidity", "Unity", "Web3"],
+        description: "NFT-based game asset system."
+      }
+    ],
+    "Smart Contracts": [
+      {
+        title: "DAO Platform",
+        image: "/images/project23.jpg",
+        liveSite: "https://example.com",
+        industry: "Governance",
+        published: "2024",
+        deliverables: ["Solidity", "OpenZeppelin", "React"],
+        description: "Decentralized autonomous organization platform."
+      },
+      {
+        title: "Supply Chain Tracking",
+        image: "/images/project24.jpg",
+        liveSite: "https://example.com",
+        industry: "Logistics",
+        published: "2024",
+        deliverables: ["Solidity", "Chainlink", "Node.js"],
+        description: "Blockchain-based supply chain tracking system."
+      }
+    ]
+  }
+};
 
- export default projects
+export default projects;

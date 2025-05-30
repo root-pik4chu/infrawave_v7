@@ -51,7 +51,7 @@ export default function Page ()  {
                 href={item.path}
                 className="text-[0.8vw] font-medium hover:cursor-pointer uppercase"
               >
-                <p className="mix-blend-difference">{item.name}</p>
+                <p className="mix-blend-difference ">{item.name}</p>
               </Link>
             </div>
           ))}
