@@ -104,7 +104,7 @@ export default function FlipCardsGrid() {
 
       <Copy><h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 lg:w-[70%] w-full">FAQ</h1></Copy>
 
-      <div ref={containerRef} className="w-full overflow-hidden">
+      <div ref={containerRef} className="w-full overflow-hidden faq-container">
         <div ref={sliderRef} className="flex gap-6 p-4 cursor-grab active:cursor-grabbing">
           {cardData.map((card, index) => (
             <div

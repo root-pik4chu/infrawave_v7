@@ -59,7 +59,7 @@ export default function RootLayout({ children }) {
         <CustomCursor />
         <Template key={pathname}>
           {children}
-        </Template>
+        </Template>  
         <div
           style={{
             position: "fixed",
@@ -86,8 +86,8 @@ export default function RootLayout({ children }) {
               }}
             />
           ))}
-        </div>
-        <Footer />
+        </div> 
+        <Footer /> 
       </body>
     </html>
   );
